@@ -8,7 +8,7 @@ import japgolly.scalajs.react.vdom.VdomNode
 package object internal {
 
   @JSImport(
-    "@material-ui/core/internal/svg-icons/ArrowDropDown",
+    "@mui/material/internal/svg-icons/ArrowDropDown",
     JSImport.Default
   )
   @js.native
@@ -17,7 +17,7 @@ package object internal {
   }
 
   @JSImport(
-    "@material-ui/core/internal/svg-icons/ArrowDownward",
+    "@mui/material/internal/svg-icons/ArrowDownward",
     JSImport.Default
   )
   @js.native

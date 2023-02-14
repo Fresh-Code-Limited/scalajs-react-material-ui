@@ -5,18 +5,18 @@ import scala.scalajs.js.JSConverters._
 
 @js.native
 trait Mixins extends js.Object {
-  def gutters: js.Function1[js.UndefOr[CSSProperties], CSSProperties] = js.native
+//  def gutters: js.Function1[js.UndefOr[CSSProperties], CSSProperties] = js.native
   def toolbar: CSSProperties = js.native
 }
 
 object Mixins {
 
   def apply(
-    gutters: js.UndefOr[CSSProperties] => CSSProperties,
+//    gutters: js.UndefOr[CSSProperties] => CSSProperties,
     toolbar: CSSProperties
   ) = {
     val o: Map[String, Any] = Map(
-      "gutters" -> gutters,
+//      "gutters" -> gutters,
       "toolbar" -> toolbar
     )
 

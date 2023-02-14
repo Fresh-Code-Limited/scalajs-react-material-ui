@@ -6,13 +6,13 @@ import scala.scalajs.js.JSConverters._
 @js.native
 trait Typography extends js.Object {
   def pxToRem: js.Function1[Int, String] = js.native
-  def round: js.Function1[Double, Int] = js.native
   def fontFamily: String = js.native
   def fontSize: Int = js.native
   def fontWeightLight: Int = js.native
   def fontWeightRegular: Int = js.native
   def fontWeightMedium: Int = js.native
-  def useNextVariants: Boolean = js.native
+  def fontWeightBold: Int = js.native
+  def htmlFontSize: Int = js.native
   def h1: TypographyStyle = js.native
   def h2: TypographyStyle = js.native
   def h3: TypographyStyle = js.native

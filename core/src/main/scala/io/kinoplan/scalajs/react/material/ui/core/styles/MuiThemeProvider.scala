@@ -10,7 +10,7 @@ object MuiThemeProvider extends ReactBridgeComponent {
   override protected lazy val componentValue: js.Object = RawComponent
 
   @JSImport(
-    "@material-ui/core/styles/MuiThemeProvider",
+    "@mui/material/styles/MuiThemeProvider",
     JSImport.Default
   )
   @js.native

@@ -9,12 +9,15 @@ import io.kinoplan.scalajs.react.material.ui.core.colors.{Color, CommonColors}
 @js.native
 trait Palette extends js.Object {
   def common: CommonColors = js.native
-  def `type`: String = js.native
+  def mode: String = js.native
   def constrastThreshold: Int = js.native
   def tonalOffset: Double = js.native
   def primary: PaletteColor = js.native
   def secondary: PaletteColor = js.native
   def error: PaletteColor = js.native
+  def warning: PaletteColor = js.native
+  def info: PaletteColor = js.native
+  def success: PaletteColor = js.native
   def grey: Color = js.native
   def text: TypeText = js.native
   def divider: String = js.native
@@ -24,11 +27,11 @@ trait Palette extends js.Object {
   def augmentColor(): Unit = js.native
 }
 
-@JSImport("@material-ui/core/styles/createPalette", "light")
+@JSImport("@mui/material/styles/createPalette", "light")
 @js.native
 object Light extends TypeObject
 
-@JSImport("@material-ui/core/styles/createPalette", "dark")
+@JSImport("@mui/material/styles/createPalette", "dark")
 @js.native
 object Dark extends TypeObject
 

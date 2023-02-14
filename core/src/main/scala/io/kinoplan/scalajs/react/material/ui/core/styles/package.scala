@@ -9,7 +9,7 @@ import japgolly.scalajs.react.vdom.VdomNode
 package object styles {
 
   @JSImport(
-    "@material-ui/core/styles/colorManipulator.js",
+    "@mui/material/styles/colorManipulator.js",
     JSImport.Default
   )
   @js.native
@@ -38,16 +38,25 @@ package object styles {
   }
 
   @JSImport(
-    "@material-ui/core/styles/createMuiTheme.js",
+    "@mui/material/styles/adaptV4Theme.js",
     JSImport.Default
   )
   @js.native
-  object createMuiTheme extends js.Function1[js.UndefOr[ThemeOptions], Theme] {
+  object adaptV4Theme extends js.Function1[js.UndefOr[DeprecatedThemeOptions], Theme] {
+    override def apply(options: js.UndefOr[DeprecatedThemeOptions] = js.undefined): Theme = js.native
+  }
+
+  @JSImport(
+    "@mui/material/styles/createTheme.js",
+    JSImport.Default
+  )
+  @js.native
+  object createTheme extends js.Function1[js.UndefOr[ThemeOptions], Theme] {
     override def apply(options: js.UndefOr[ThemeOptions] = js.undefined): Theme = js.native
   }
 
   @JSImport(
-    "@material-ui/core/styles/createPalette.js",
+    "@mui/material/styles/createPalette.js",
     JSImport.Default
   )
   @js.native
@@ -55,14 +64,14 @@ package object styles {
     override def apply(palette: PaletteOptions): Palette = js.native
   }
 
-  @JSImport("@material-ui/core/styles/createMixins.js", JSImport.Default)
+  @JSImport("@mui/material/styles/createMixins.js", JSImport.Default)
   @js.native
   object createMixins extends js.Function3[Breakpoints, Spacing, MixinsOptions, Mixins] {
     override def apply(breakpoints: Breakpoints, spacing: Spacing, mixins: MixinsOptions): Mixins = js.native
   }
 
   @JSImport(
-    "@material-ui/core/styles/createBreakpoints.js",
+    "@mui/material/styles/createBreakpoints.js",
     JSImport.Default
   )
   @js.native
@@ -71,7 +80,7 @@ package object styles {
   }
 
   @JSImport(
-    "@material-ui/core/styles/createTypography.js",
+    "@mui/material/styles/createTypography.js",
     JSImport.Default
   )
   @js.native
@@ -86,7 +95,7 @@ package object styles {
   }
 
   @JSImport(
-    "@material-ui/core/styles/getStylesCreator.js",
+    "@mui/material/styles/getStylesCreator.js",
     JSImport.Default
   )
   @js.native
@@ -95,7 +104,7 @@ package object styles {
   }
 
   @JSImport(
-    "@material-ui/core/styles/getThemeProps.js",
+    "@mui/material/styles/getThemeProps.js",
     JSImport.Default
   )
   @js.native
@@ -103,33 +112,33 @@ package object styles {
     override def apply(params: js.Object): js.Any = js.native
   }
 
-  @JSImport("@material-ui/core/styles/shadows.js", JSImport.Default)
+  @JSImport("@mui/material/styles/shadows.js", JSImport.Default)
   @js.native
   object shadows extends js.Array[String]
 
-  @JSImport("@material-ui/core/styles/spacing.js", JSImport.Default)
+  @JSImport("@mui/material/styles/spacing.js", JSImport.Default)
   @js.native
   object spacing extends Spacing
 
-  @JSImport("@material-ui/core/styles/transitions.js", JSImport.Default)
+  @JSImport("@mui/material/styles/transitions.js", JSImport.Default)
   @js.native
   object transitions extends Transitions
 
-  @JSImport("@material-ui/core/styles/withStyles.js", "noopTheme")
+  @JSImport("@mui/material/styles/withStyles.js", "noopTheme")
   @js.native
   object noopTheme extends Theme
 
-  @JSImport("@material-ui/core/styles/withStyles.js", "defaultTheme")
+  @JSImport("@mui/material/styles/withStyles.js", "defaultTheme")
   @js.native
   object defaultTheme extends Theme
 
-  @JSImport("@material-ui/core/styles/withTheme.js", JSImport.Default)
+  @JSImport("@mui/material/styles/withTheme.js", JSImport.Default)
   @js.native
   object withTheme extends js.Function0[js.Function1[VdomNode, VdomNode]] {
     override def apply(): js.Function1[VdomNode, VdomNode] = js.native
   }
 
-  @JSImport("@material-ui/core/styles/zIndex.js", JSImport.Default)
+  @JSImport("@mui/material/styles/zIndex.js", JSImport.Default)
   @js.native
   object zIndex extends ZIndex
 
