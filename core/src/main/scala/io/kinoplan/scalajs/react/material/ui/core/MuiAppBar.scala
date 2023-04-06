@@ -14,13 +14,14 @@ object MuiAppBar extends ReactBridgeComponent with MuiAppBarExtensions {
   object RawComponent extends js.Function
 
   def apply(
-    classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
-    color: js.UndefOr[Color.Value] = js.undefined,
-    position: js.UndefOr[Position.Value] = js.undefined,
-    component: js.UndefOr[ComponentPropType] = js.undefined,
-    elevation: js.UndefOr[Int] = js.undefined,
-    square: js.UndefOr[Boolean] = js.undefined
-  ): WithProps = auto
+             classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
+             color: js.UndefOr[Color.Value] = js.undefined,
+             position: js.UndefOr[Position.Value] = js.undefined,
+             component: js.UndefOr[ComponentPropType] = js.undefined,
+             elevation: js.UndefOr[Int] = js.undefined,
+             square: js.UndefOr[Boolean] = js.undefined,
+           ):
+  WithProps = auto
 
 }
 

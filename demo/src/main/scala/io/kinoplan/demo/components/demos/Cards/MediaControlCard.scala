@@ -1,13 +1,13 @@
 package io.kinoplan.demo.components.demos.Cards
 
 import japgolly.scalajs.react.{BackendScope, ScalaComponent}
-import japgolly.scalajs.react.vdom.all.{VdomElement, _}
+import japgolly.scalajs.react.vdom.all._
 import scalacss.ScalaCssReactImplicits
 
 import io.kinoplan.demo.components.ComponentContainer
 import io.kinoplan.demo.styles.demos.Cards.{DefaultMediaControlCardStyle, MediaControlCardStyle}
 import io.kinoplan.scalajs.react.material.ui.core._
-import io.kinoplan.scalajs.react.material.ui.core.styles.Direction
+import io.kinoplan.scalajs.react.material.ui.core.system.Direction
 import io.kinoplan.scalajs.react.material.ui.icons.{MuiIcons, MuiIconsModule}
 
 object MediaControlCard extends ScalaCssReactImplicits {

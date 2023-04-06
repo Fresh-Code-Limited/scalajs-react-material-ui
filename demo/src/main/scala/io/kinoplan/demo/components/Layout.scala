@@ -12,7 +12,7 @@ import io.kinoplan.demo.styles.{DefaultLayoutStyle, LayoutStyle}
 import io.kinoplan.demo.utils.Helpers._
 import io.kinoplan.demo.utils.icons.{MuiLightBulbFullIcon, MuiLightBulbOutlineIcon}
 import io.kinoplan.scalajs.react.material.ui.core._
-import io.kinoplan.scalajs.react.material.ui.core.styles._
+import io.kinoplan.scalajs.react.material.ui.core.system._
 import io.kinoplan.scalajs.react.material.ui.icons.{MuiIcons, MuiIconsModule}
 
 object Layout extends ScalaCssReactImplicits {
@@ -25,14 +25,15 @@ object Layout extends ScalaCssReactImplicits {
   case class Props(router: RouterCtl[Page], r: Resolution[Page], style: LayoutStyle)
 
   case class State(
-    open: Boolean = true,
-    paletteType: PaletteType.Value = PaletteType.light
-  ) {
+                    open: Boolean = true,
+                    paletteType: PaletteType.Value = PaletteType.light
+                  ) {
     val isLightPaletteType = paletteType == PaletteType.light
 
     val primaryMainColor = if (isLightPaletteType) "#2196f3" else "#fdd835"
 
     def handleDrawerOpen = copy(open = true)
+
     def handleDrawerClose = copy(open = false)
 
     def handlePaletteTypeChange = copy(
@@ -51,7 +52,7 @@ object Layout extends ScalaCssReactImplicits {
     def render(props: Props, state: State): VdomElement = {
       val css = props.style
 
-      val theme = createMuiTheme(
+      val theme = createTheme(
         options = ThemeOptions(
           typography = TypographyOptions(
             useNextVariants = true
@@ -84,7 +85,7 @@ object Layout extends ScalaCssReactImplicits {
 
       div(
         css.root,
-        MuiThemeProvider(theme = theme)(
+        ThemeProvider(theme = theme)(
           MuiCssBaseline(),
           MuiAppBar(position = MuiAppBar.Position.fixed)(
             css.appBar,
@@ -149,9 +150,9 @@ object Layout extends ScalaCssReactImplicits {
     .build
 
   def apply(
-    router: RouterCtl[Page],
-    r: Resolution[Page],
-    style: LayoutStyle = DefaultLayoutStyle
-  ) = component(Props(router, r, style))
+             router: RouterCtl[Page],
+             r: Resolution[Page],
+             style: LayoutStyle = DefaultLayoutStyle
+           ) = component(Props(router, r, style))
 
 }

@@ -18,7 +18,7 @@ import io.kinoplan.scalajs.react.material.ui.core.{
   MuiTextField,
   colors
 }
-import io.kinoplan.scalajs.react.material.ui.core.styles._
+import io.kinoplan.scalajs.react.material.ui.core.system._
 
 object CustomizedInputs extends ScalaCssReactImplicits {
   case class Props(style: CustomizedInputsStyle)
@@ -52,7 +52,7 @@ object CustomizedInputs extends ScalaCssReactImplicits {
         )
       )
 
-      val theme = createMuiTheme(
+      val theme = createTheme(
         ThemeOptions(
           palette = PaletteOptions(
             primary = colors.green
@@ -88,7 +88,7 @@ object CustomizedInputs extends ScalaCssReactImplicits {
               label = "Custom CSS".toVdom,
               variant = MuiTextField.Variant.outlined
             )(css.cssMargin, id := "custom-css-outlined-input"),
-            MuiThemeProvider(theme = theme)(
+            ThemeProvider(theme = theme)(
               MuiTextField(label = "MuiThemeProvider".toVdom)(css.cssMargin, id := "mui-theme-provider-standard-input"),
               MuiTextField(
                 label = "MuiThemeProvider".toVdom,

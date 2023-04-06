@@ -7,7 +7,7 @@ import scalacss.ScalaCssReactImplicits
 import io.kinoplan.demo.components.ComponentContainer
 import io.kinoplan.demo.styles.demos.Steppers.{DefaultMobileStepperStyle, MobileStepperStyle}
 import io.kinoplan.scalajs.react.material.ui.core.{MuiButton, MuiMobileStepper}
-import io.kinoplan.scalajs.react.material.ui.core.styles.Direction
+import io.kinoplan.scalajs.react.material.ui.core.system.Direction
 import io.kinoplan.scalajs.react.material.ui.icons.{MuiIcons, MuiIconsModule}
 
 object DotsMobileStepper extends ScalaCssReactImplicits {

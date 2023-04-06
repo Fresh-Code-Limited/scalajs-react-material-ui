@@ -5,7 +5,7 @@ import scala.scalajs.js
 import io.kinoplan.demo.CssSettings._
 import io.kinoplan.demo.styles.{CommonStyle, DefaultCommonStyle}
 import io.kinoplan.scalajs.react.material.ui.core.colors
-import io.kinoplan.scalajs.react.material.ui.core.styles.CreateTransitionsOptions
+import io.kinoplan.scalajs.react.material.ui.core.system.CreateTransitionsOptions
 
 case class RecipeReviewCardStyle(common: CommonStyle = DefaultCommonStyle) extends StyleSheet.Inline {
 

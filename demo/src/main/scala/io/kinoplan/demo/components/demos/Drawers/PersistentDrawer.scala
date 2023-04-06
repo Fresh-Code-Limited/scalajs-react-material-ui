@@ -9,7 +9,7 @@ import io.kinoplan.demo.components.ComponentContainer
 import io.kinoplan.demo.styles.demos.Drawers.{DefaultPersistentDrawerStyle, PersistentDrawerStyle}
 import io.kinoplan.demo.utils.Helpers.styleAToClassName
 import io.kinoplan.scalajs.react.material.ui.core._
-import io.kinoplan.scalajs.react.material.ui.core.styles.Direction
+import io.kinoplan.scalajs.react.material.ui.core.system.Direction
 import io.kinoplan.scalajs.react.material.ui.icons.{MuiIcons, MuiIconsModule}
 
 object PersistentDrawer extends ScalaCssReactImplicits {

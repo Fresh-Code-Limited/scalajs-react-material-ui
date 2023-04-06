@@ -1,13 +1,13 @@
 package io.kinoplan.demo.components.demos.Buttons
 
 import japgolly.scalajs.react.{BackendScope, ScalaComponent}
-import japgolly.scalajs.react.vdom.all.{VdomElement, _}
+import japgolly.scalajs.react.vdom.all._
 import scalacss.ScalaCssReactImplicits
 
 import io.kinoplan.demo.components.ComponentContainer
 import io.kinoplan.demo.styles.demos.Buttons.{CustomizedButtonsStyle, DefaultCustomizedButtonsStyle}
 import io.kinoplan.scalajs.react.material.ui.core.{MuiButton, colors}
-import io.kinoplan.scalajs.react.material.ui.core.styles._
+import io.kinoplan.scalajs.react.material.ui.core.system._
 
 object CustomizedButtons extends ScalaCssReactImplicits {
   case class Props(style: CustomizedButtonsStyle)
@@ -17,7 +17,7 @@ object CustomizedButtons extends ScalaCssReactImplicits {
     def render(props: Props): VdomElement = {
       val css = props.style
 
-      val theme = createMuiTheme(
+      val theme = createTheme(
         options = ThemeOptions(
           typography = TypographyOptions(useNextVariants = true),
           palette = PaletteOptions(primary = colors.green)
@@ -35,7 +35,7 @@ object CustomizedButtons extends ScalaCssReactImplicits {
               css.cssRoot,
               "Custom CSS"
             ),
-            MuiThemeProvider(theme = theme)(
+            ThemeProvider(theme = theme)(
               MuiButton(
                 variant = MuiButton.Variant.contained,
                 color = MuiButton.Color.primary

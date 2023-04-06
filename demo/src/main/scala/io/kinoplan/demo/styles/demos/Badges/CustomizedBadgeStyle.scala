@@ -2,7 +2,7 @@ package io.kinoplan.demo.styles.demos.Badges
 
 import io.kinoplan.demo.CssSettings._
 import io.kinoplan.demo.styles.{CommonStyle, DefaultCommonStyle}
-import io.kinoplan.scalajs.react.material.ui.core.styles.PaletteType
+import io.kinoplan.scalajs.react.material.ui.core.system.PaletteType
 
 case class CustomizedBadgeStyle(common: CommonStyle = DefaultCommonStyle) extends StyleSheet.Inline {
 

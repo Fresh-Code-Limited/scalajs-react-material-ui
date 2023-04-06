@@ -8,7 +8,7 @@ import io.kinoplan.demo.components.{ComponentContainer, Layout}
 import io.kinoplan.demo.models.Steppers.TutorialStep
 import io.kinoplan.demo.styles.demos.Steppers.{DefaultTextMobileStepperStyle, TextMobileStepperStyle}
 import io.kinoplan.scalajs.react.material.ui.core.{MuiButton, MuiMobileStepper, MuiPaper, MuiTypography}
-import io.kinoplan.scalajs.react.material.ui.core.styles.Direction
+import io.kinoplan.scalajs.react.material.ui.core.system.Direction
 import io.kinoplan.scalajs.react.material.ui.icons.{MuiIcons, MuiIconsModule}
 
 object TextMobileStepper extends ScalaCssReactImplicits {

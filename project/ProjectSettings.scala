@@ -13,7 +13,7 @@ object ProjectSettings {
     .enablePlugins(ScalaJSBundlerPlugin, ScalafixPlugin)
     .settings(
       version := sys.env.getOrElse("DRONE_BUILD_NUMBER", sys.env.getOrElse("BUILD_ID", "dev")),
-      crossScalaVersions := Seq("2.13.10"),
+      crossScalaVersions := Seq("2.13.9"),
       scalaVersion := crossScalaVersions.value.last,
       webpackBundlingMode := BundlingMode.LibraryOnly(),
       useYarn := true,

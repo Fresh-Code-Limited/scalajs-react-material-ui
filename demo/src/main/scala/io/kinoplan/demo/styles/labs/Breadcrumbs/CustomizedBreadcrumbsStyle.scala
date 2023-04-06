@@ -2,7 +2,7 @@ package io.kinoplan.demo.styles.labs.Breadcrumbs
 
 import io.kinoplan.demo.CssSettings._
 import io.kinoplan.demo.styles.{CommonStyle, DefaultCommonStyle}
-import io.kinoplan.scalajs.react.material.ui.core.styles.colorManipulator.emphasize
+import io.kinoplan.scalajs.react.material.ui.core.system.colorManipulator.emphasize
 
 case class CustomizedBreadcrumbsStyle(common: CommonStyle = DefaultCommonStyle) extends StyleSheet.Inline {
 
