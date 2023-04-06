@@ -9,7 +9,7 @@ object AppMain {
   def main(args: Array[String]): Unit = {
     val root = dom.document.getElementById("root")
 
-    AppRouter.router().renderIntoDOM(root)
+    AppRouter.router().renderIntoDOM(root): Unit
 
     AppCSS.load()
   }
