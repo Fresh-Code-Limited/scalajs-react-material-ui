@@ -3,7 +3,13 @@ package io.kinoplan.demo.styles
 import io.kinoplan.demo.CssSettings._
 import io.kinoplan.demo.components.Layout
 import io.kinoplan.scalajs.react.material.ui.core.colors
-import io.kinoplan.scalajs.react.material.ui.core.system.{PaletteOptions, Theme, ThemeOptions, TypographyOptions, createTheme}
+import io.kinoplan.scalajs.react.material.ui.core.system.{
+  PaletteOptions,
+  Theme,
+  ThemeOptions,
+  TypographyOptions,
+  createTheme
+}
 
 class CommonStyle extends StyleSheet.Inline {
   import dsl._

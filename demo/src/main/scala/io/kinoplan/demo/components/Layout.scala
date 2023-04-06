@@ -25,9 +25,9 @@ object Layout extends ScalaCssReactImplicits {
   case class Props(router: RouterCtl[Page], r: Resolution[Page], style: LayoutStyle)
 
   case class State(
-                    open: Boolean = true,
-                    paletteType: PaletteType.Value = PaletteType.light
-                  ) {
+    open: Boolean = true,
+    paletteType: PaletteType.Value = PaletteType.light
+  ) {
     val isLightPaletteType = paletteType == PaletteType.light
 
     val primaryMainColor = if (isLightPaletteType) "#2196f3" else "#fdd835"
@@ -150,9 +150,9 @@ object Layout extends ScalaCssReactImplicits {
     .build
 
   def apply(
-             router: RouterCtl[Page],
-             r: Resolution[Page],
-             style: LayoutStyle = DefaultLayoutStyle
-           ) = component(Props(router, r, style))
+    router: RouterCtl[Page],
+    r: Resolution[Page],
+    style: LayoutStyle = DefaultLayoutStyle
+  ) = component(Props(router, r, style))
 
 }

@@ -30,17 +30,17 @@ trait ThemeOptions extends js.Object {
 object ThemeOptions {
 
   def apply(
-             shape: js.UndefOr[ShapeOptions] = js.undefined,
-             breakpoints: js.UndefOr[BreakpointsOptions] = js.undefined,
-             direction: js.UndefOr[Direction.Value] = js.undefined,
-             mixins: js.UndefOr[MixinsOptions] = js.undefined,
-             palette: js.UndefOr[PaletteOptions] = js.undefined,
-             shadows: js.UndefOr[js.Array[String]] = js.undefined,
-             spacing: js.UndefOr[SpacingOptions] = js.undefined,
-             transitions: js.UndefOr[TransitionsOptions] = js.undefined,
-             typography: js.UndefOr[TypographyOptions | js.Function1[Palette, TypographyOptions]] = js.undefined,
-             zIndex: js.UndefOr[ZIndexOptions] = js.undefined,
-           ) = {
+    shape: js.UndefOr[ShapeOptions] = js.undefined,
+    breakpoints: js.UndefOr[BreakpointsOptions] = js.undefined,
+    direction: js.UndefOr[Direction.Value] = js.undefined,
+    mixins: js.UndefOr[MixinsOptions] = js.undefined,
+    palette: js.UndefOr[PaletteOptions] = js.undefined,
+    shadows: js.UndefOr[js.Array[String]] = js.undefined,
+    spacing: js.UndefOr[SpacingOptions] = js.undefined,
+    transitions: js.UndefOr[TransitionsOptions] = js.undefined,
+    typography: js.UndefOr[TypographyOptions | js.Function1[Palette, TypographyOptions]] = js.undefined,
+    zIndex: js.UndefOr[ZIndexOptions] = js.undefined
+  ) = {
     val o: Map[String, Any] = Seq(
       shape.toOption.map("shape" -> _),
       breakpoints.toOption.map("breakpoints" -> _),
@@ -51,9 +51,10 @@ object ThemeOptions {
       spacing.toOption.map("spacing" -> _),
       transitions.toOption.map("transitions" -> _),
       typography.toOption.map("typography" -> _),
-      zIndex.toOption.map("zIndex" -> _),
+      zIndex.toOption.map("zIndex" -> _)
     ).flatten.toMap
 
     o.toJSDictionary.asInstanceOf[js.Object].asInstanceOf[ThemeOptions]
   }
+
 }

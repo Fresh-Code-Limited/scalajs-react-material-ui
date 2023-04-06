@@ -19,14 +19,14 @@ object ColorSpaceValues {
     rgba: String,
     hsl: String,
     hsla: String,
-    color: String,
+    color: String
   ) = {
     val o: Map[String, Any] = Map(
       "srgb" -> rgb,
       "display-p3" -> rgba,
       "a98-rg" -> hsl,
       "prophoto-rgb" -> hsla,
-      "rec-2020" -> color,
+      "rec-2020" -> color
     )
 
     o.toJSDictionary.asInstanceOf[js.Object].asInstanceOf[ColorSpaceValues]

@@ -19,14 +19,14 @@ object ColorFormatValues {
     rgba: String,
     hsl: String,
     hsla: String,
-    color: String,
+    color: String
   ) = {
     val o: Map[String, Any] = Map(
       "rgb" -> rgb,
       "rgba" -> rgba,
       "hsl" -> hsl,
       "hsla" -> hsla,
-      "color" -> color,
+      "color" -> color
     )
 
     o.toJSDictionary.asInstanceOf[js.Object].asInstanceOf[ColorFormatValues]

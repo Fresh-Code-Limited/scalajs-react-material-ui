@@ -33,7 +33,11 @@ package object system {
 
     def emphasize(color: String, coefficient: js.UndefOr[Double]): String = js.native
 
-    def private_safeEmphasize(color: String, coefficient: js.UndefOr[Double], warning: js.UndefOr[String]): String = js.native
+    def private_safeEmphasize(
+      color: String,
+      coefficient: js.UndefOr[Double],
+      warning: js.UndefOr[String]
+    ): String = js.native
 
     def alpha(color: String, value: Double): String = js.native
 
@@ -41,11 +45,20 @@ package object system {
 
     def darken(color: String, coefficient: js.UndefOr[Double]): String = js.native
 
-    def private_safeDarken(color: String, coefficient: js.UndefOr[Double], warning: js.UndefOr[String]): String = js.native
+    def private_safeDarken(
+      color: String,
+      coefficient: js.UndefOr[Double],
+      warning: js.UndefOr[String]
+    ): String = js.native
 
     def lighten(color: String, coefficient: js.UndefOr[Double]): String = js.native
 
-    def private_safeLighten(color: String, coefficient: js.UndefOr[Double], warning: js.UndefOr[String]): String = js.native
+    def private_safeLighten(
+      color: String,
+      coefficient: js.UndefOr[Double],
+      warning: js.UndefOr[String]
+    ): String = js.native
+
   }
 
   @JSImport(

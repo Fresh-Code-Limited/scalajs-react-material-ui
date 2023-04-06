@@ -18,7 +18,7 @@ object Modules {
           DependenciesNPM.reactDom,
           DependenciesNPM.materialUiCore,
           DependenciesNPM.emotionReact,
-          DependenciesNPM.emotionStyled,
+          DependenciesNPM.emotionStyled
         ),
       Compile / npmResolutions ++=
         (Compile / npmDependencies).value.toMap
@@ -37,7 +37,7 @@ object Modules {
           DependenciesNPM.materialUiCore,
           DependenciesNPM.materialUiIcons,
           DependenciesNPM.emotionReact,
-          DependenciesNPM.emotionStyled,
+          DependenciesNPM.emotionStyled
         ),
       Compile / npmResolutions ++=
         (Compile / npmDependencies).value.toMap
@@ -56,7 +56,7 @@ object Modules {
           DependenciesNPM.materialUiCore,
           DependenciesNPM.materialUiLab,
           DependenciesNPM.emotionReact,
-          DependenciesNPM.emotionStyled,
+          DependenciesNPM.emotionStyled
         ),
       Compile / npmResolutions ++=
         (Compile / npmDependencies).value.toMap
