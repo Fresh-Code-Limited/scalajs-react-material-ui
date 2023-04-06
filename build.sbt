@@ -41,16 +41,10 @@ inThisBuild(
   List(
     sonatypeCredentialHost := Sonatype.sonatype01,
     versionScheme := Some(VersionScheme.EarlySemVer),
-    organization := "io.kinoplan",
-    homepage := Some(url("https://github.com/kinoplan/scalajs-react-material-ui")),
+    organization := "com.freshcodelimited",
+    homepage := Some(url("https://github.com/Fresh-Code-Limited/scalajs-react-material-ui")),
     licenses := Seq("Apache-2.0" -> url("https://opensource.org/licenses/Apache-2.0")),
-    developers := List(Developer("kinoplan", "Kinoplan", "job@kinoplan.ru", url("https://kinoplan.tech"))),
-    scmInfo := Some(
-      ScmInfo(
-        url("https://github.com/kinoplan/scalajs-react-material-ui"),
-        "scm:git:git@github.com:kinoplan/scalajs-react-material-ui.git"
-      )
-    )
+    developers := List(Developer("fcl", "Fresh Code Limited", "info@freshcodelimited.com", url("https://freshcodelimited.com"))),
   )
 )
 // format: on
