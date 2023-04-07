@@ -62,7 +62,7 @@ package object system {
   }
 
   @JSImport(
-    "@mui/system/createTheme.js",
+    "@mui/system/createTheme/createTheme.js",
     JSImport.Default
   )
   @js.native
@@ -71,7 +71,7 @@ package object system {
   }
 
   @JSImport(
-    "@mui/system/createBreakpoints.js",
+    "@mui/system/createTheme/createBreakpoints.js",
     JSImport.Default
   )
   @js.native
@@ -80,7 +80,7 @@ package object system {
   }
 
   @JSImport(
-    "@mui/system/getThemeProps.js",
+    "@mui/system/useThemeProps/getThemeProps.js",
     JSImport.Default
   )
   @js.native
@@ -92,29 +92,13 @@ package object system {
   @js.native
   object shadows extends js.Array[String]
 
-  @JSImport("@mui/system/spacing.js", JSImport.Default)
-  @js.native
-  object spacing extends Spacing
-
-//  @JSImport("@mui/system/transitions.js", JSImport.Default)
-//  @js.native
-//  object transitions extends Transitions
-
-//  @JSImport("@mui/system/withStyles.js", "noopTheme")
-//  @js.native
-//  object noopTheme extends Theme
-//
-//  @JSImport("@mui/system/withStyles.js", "defaultTheme")
-//  @js.native
-//  object defaultTheme extends Theme
-
-  @JSImport("@mui/system/withTheme.js", JSImport.Default)
+  @JSImport("@mui/material/styles/withTheme.js", JSImport.Default)
   @js.native
   object withTheme extends js.Function0[js.Function1[VdomNode, VdomNode]] {
     override def apply(): js.Function1[VdomNode, VdomNode] = js.native
   }
 
-  @JSImport("@mui/system/useThemeProps/zIndex.js", JSImport.Default)
+  @JSImport("@mui/system/zIndex.js", JSImport.Default)
   @js.native
   object zIndex extends ZIndex
 

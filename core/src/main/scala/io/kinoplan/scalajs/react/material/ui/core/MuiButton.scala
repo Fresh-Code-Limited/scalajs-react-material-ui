@@ -39,10 +39,13 @@ trait MuiButtonExtensions {
   object Color extends Enumeration {
     type Value = String
 
-    val default = "default"
     val inherit = "inherit"
     val primary = "primary"
     val secondary = "secondary"
+    val success = "success"
+    val error = "error"
+    val info = "info"
+    val warning = "warning"
   }
 
   object Size extends Enumeration {

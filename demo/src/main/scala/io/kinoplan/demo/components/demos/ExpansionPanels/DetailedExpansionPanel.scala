@@ -24,8 +24,8 @@ object DetailedExpansionPanel extends ScalaCssReactImplicits {
         ComponentContainer("Secondary heading and Columns")(
           div(
             css.root,
-            MuiExpansionPanel(defaultExpanded = true)(
-              MuiExpansionPanelSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
+            MuiAccordion(defaultExpanded = true)(
+              MuiAccordionSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
                 div(css.column, MuiTypography()(css.heading, "Location")),
                 div(
                   css.column,
@@ -50,7 +50,7 @@ object DetailedExpansionPanel extends ScalaCssReactImplicits {
                 )
               ),
               MuiDivider(),
-              MuiExpansionPanelActions()(
+              MuiAccordionActions()(
                 MuiButton(size = MuiButton.Size.small)("Cancel"),
                 MuiButton(size = MuiButton.Size.small, color = MuiButton.Color.primary)("Save")
               )

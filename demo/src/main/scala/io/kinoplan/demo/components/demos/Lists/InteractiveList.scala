@@ -74,7 +74,7 @@ object InteractiveList extends ScalaCssReactImplicits {
                 label = VdomNode("Enable secondary text")
               )
             ),
-            MuiGrid(container = true, spacing = MuiGrid.Spacing.`16`)(
+            MuiGrid(container = true, spacing = 2)(
               MuiGrid(item = true, xs = 12, md = 6)(
                 MuiTypography(variant = MuiTypography.Variant.h6)(css.title, "Text only"),
                 div(
@@ -113,7 +113,7 @@ object InteractiveList extends ScalaCssReactImplicits {
                 )
               )
             ),
-            MuiGrid(container = true, spacing = MuiGrid.Spacing.`16`)(
+            MuiGrid(container = true, spacing = 2)(
               MuiGrid(item = true, xs = 12, md = 6)(
                 MuiTypography(variant = MuiTypography.Variant.h6)(css.title, "Avatar with text"),
                 div(

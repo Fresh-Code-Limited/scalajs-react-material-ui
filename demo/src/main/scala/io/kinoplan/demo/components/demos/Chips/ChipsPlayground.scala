@@ -102,7 +102,7 @@ object ChipsPlayground extends ScalaCssReactImplicits {
                 container = true,
                 justify = MuiGrid.Justify.center,
                 alignItems = MuiGrid.AlignItems.center,
-                spacing = MuiGrid.Spacing.`40`
+                spacing = 5
               )(
                 MuiGrid(item = true)(
                   css.chipWrapper,
@@ -122,7 +122,7 @@ object ChipsPlayground extends ScalaCssReactImplicits {
             MuiGrid(item = true, xs = 12)(
               MuiPaper()(
                 css.control,
-                MuiGrid(item = true, container = true, spacing = MuiGrid.Spacing.`24`)(
+                MuiGrid(item = true, container = true, spacing = 3)(
                   MuiGrid(item = true, xs = 12)(
                     MuiFormControl(component = "fieldset")(
                       MuiFormLabel()("color"),

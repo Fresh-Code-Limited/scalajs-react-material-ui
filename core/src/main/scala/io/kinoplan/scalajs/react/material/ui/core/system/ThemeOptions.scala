@@ -18,7 +18,7 @@ trait ThemeOptions extends js.Object {
 
   def shadows: js.UndefOr[js.Array[String]] = js.native
 
-  def spacing: js.UndefOr[SpacingOptions] = js.native
+  def spacing: js.UndefOr[Double | (Double => (Double | String)) | ((Double | String) => (Double | String))] = js.native
 
   def transitions: js.UndefOr[TransitionsOptions] = js.native
 
@@ -36,7 +36,7 @@ object ThemeOptions {
     mixins: js.UndefOr[MixinsOptions] = js.undefined,
     palette: js.UndefOr[PaletteOptions] = js.undefined,
     shadows: js.UndefOr[js.Array[String]] = js.undefined,
-    spacing: js.UndefOr[SpacingOptions] = js.undefined,
+    spacing: js.UndefOr[Double | (Double => (Double | String)) | ((Double | String) => (Double | String))] = js.undefined,
     transitions: js.UndefOr[TransitionsOptions] = js.undefined,
     typography: js.UndefOr[TypographyOptions | js.Function1[Palette, TypographyOptions]] = js.undefined,
     zIndex: js.UndefOr[ZIndexOptions] = js.undefined

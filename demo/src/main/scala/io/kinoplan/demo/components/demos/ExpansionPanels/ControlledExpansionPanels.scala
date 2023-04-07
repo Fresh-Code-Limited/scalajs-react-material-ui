@@ -10,9 +10,9 @@ import io.kinoplan.demo.styles.demos.ExpansionPanels.{
   DefaultControlledExpansionPanelsStyle
 }
 import io.kinoplan.scalajs.react.material.ui.core.{
-  MuiExpansionPanel,
+  MuiAccordion,
   MuiExpansionPanelDetails,
-  MuiExpansionPanelSummary,
+  MuiAccordionSummary,
   MuiTypography
 }
 import io.kinoplan.scalajs.react.material.ui.icons.{MuiIcons, MuiIconsModule}
@@ -42,9 +42,9 @@ object ControlledExpansionPanels extends ScalaCssReactImplicits {
         ComponentContainer("Controlled Accordion")(
           div(
             css.root,
-            MuiExpansionPanel(expanded = state.isPanel1)(
+            MuiAccordion(expanded = state.isPanel1)(
               onChange --> handleChange("panel1"),
-              MuiExpansionPanelSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
+              MuiAccordionSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
                 MuiTypography()(css.heading, "General settings"),
                 MuiTypography()(css.secondaryHeading, "I am an expansion panel")
               ),
@@ -55,9 +55,9 @@ object ControlledExpansionPanels extends ScalaCssReactImplicits {
                 )
               )
             ),
-            MuiExpansionPanel(expanded = state.isPanel2)(
+            MuiAccordion(expanded = state.isPanel2)(
               onChange --> handleChange("panel2"),
-              MuiExpansionPanelSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
+              MuiAccordionSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
                 MuiTypography()(css.heading, "Users"),
                 MuiTypography()(css.secondaryHeading, "You are currently not an owner")
               ),
@@ -68,9 +68,9 @@ object ControlledExpansionPanels extends ScalaCssReactImplicits {
                 )
               )
             ),
-            MuiExpansionPanel(expanded = state.isPanel3)(
+            MuiAccordion(expanded = state.isPanel3)(
               onChange --> handleChange("panel3"),
-              MuiExpansionPanelSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
+              MuiAccordionSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
                 MuiTypography()(css.heading, "Advanced settings"),
                 MuiTypography()(
                   css.secondaryHeading,
@@ -84,9 +84,9 @@ object ControlledExpansionPanels extends ScalaCssReactImplicits {
                 )
               )
             ),
-            MuiExpansionPanel(expanded = state.isPanel4)(
+            MuiAccordion(expanded = state.isPanel4)(
               onChange --> handleChange("panel4"),
-              MuiExpansionPanelSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
+              MuiAccordionSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
                 MuiTypography()(css.heading, "Personal data")
               ),
               MuiExpansionPanelDetails()(

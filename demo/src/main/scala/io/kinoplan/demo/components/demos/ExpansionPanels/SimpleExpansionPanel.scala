@@ -7,9 +7,9 @@ import scalacss.ScalaCssReactImplicits
 import io.kinoplan.demo.components.ComponentContainer
 import io.kinoplan.demo.styles.demos.ExpansionPanels.{DefaultSimpleExpansionPanelStyle, SimpleExpansionPanelStyle}
 import io.kinoplan.scalajs.react.material.ui.core.{
-  MuiExpansionPanel,
+  MuiAccordion,
   MuiExpansionPanelDetails,
-  MuiExpansionPanelSummary,
+  MuiAccordionSummary,
   MuiTypography
 }
 import io.kinoplan.scalajs.react.material.ui.icons.{MuiIcons, MuiIconsModule}
@@ -26,8 +26,8 @@ object SimpleExpansionPanel extends ScalaCssReactImplicits {
         ComponentContainer("Simple Expansion Panel")(
           div(
             css.root,
-            MuiExpansionPanel()(
-              MuiExpansionPanelSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
+            MuiAccordion()(
+              MuiAccordionSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
                 MuiTypography()(css.heading, "Expansion Panel 1")
               ),
               MuiExpansionPanelDetails()(
@@ -37,8 +37,8 @@ object SimpleExpansionPanel extends ScalaCssReactImplicits {
                 )
               )
             ),
-            MuiExpansionPanel()(
-              MuiExpansionPanelSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
+            MuiAccordion()(
+              MuiAccordionSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
                 MuiTypography()(css.heading, "Expansion Panel 2")
               ),
               MuiExpansionPanelDetails()(
@@ -48,9 +48,9 @@ object SimpleExpansionPanel extends ScalaCssReactImplicits {
                 )
               )
             ),
-            MuiExpansionPanel()(
+            MuiAccordion()(
               disabled := true,
-              MuiExpansionPanelSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
+              MuiAccordionSummary(expandIcon = MuiIcons(MuiIconsModule.ExpandMore)()())(
                 MuiTypography()(css.heading, "Disabled Expansion Panel")
               )
             )

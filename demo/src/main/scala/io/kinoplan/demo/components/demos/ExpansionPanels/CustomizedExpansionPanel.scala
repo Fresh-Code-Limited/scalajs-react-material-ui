@@ -10,9 +10,9 @@ import io.kinoplan.demo.styles.demos.ExpansionPanels.{
   DefaultCustomizedExpansionPanelStyle
 }
 import io.kinoplan.scalajs.react.material.ui.core.{
-  MuiExpansionPanel,
+  MuiAccordion,
   MuiExpansionPanelDetails,
-  MuiExpansionPanelSummary,
+  MuiAccordionSummary,
   MuiTypography
 }
 
@@ -38,11 +38,11 @@ object CustomizedExpansionPanel extends ScalaCssReactImplicits {
       div(
         ComponentContainer("Customized Expansion Panel")(
           div(
-            MuiExpansionPanel(square = true, expanded = state.isPanel1)(
+            MuiAccordion(square = true, expanded = state.isPanel1)(
               css.panelRoot,
               css.panelExpanded,
               onChange --> handleChange("panel1"),
-              MuiExpansionPanelSummary()(
+              MuiAccordionSummary()(
                 css.summaryRoot,
                 css.summaryContent,
                 MuiTypography()("Collapsible Group Item #1")
@@ -56,11 +56,11 @@ object CustomizedExpansionPanel extends ScalaCssReactImplicits {
                 )
               )
             ),
-            MuiExpansionPanel(square = true, expanded = state.isPanel2)(
+            MuiAccordion(square = true, expanded = state.isPanel2)(
               css.panelRoot,
               css.panelExpanded,
               onChange --> handleChange("panel2"),
-              MuiExpansionPanelSummary()(
+              MuiAccordionSummary()(
                 css.summaryRoot,
                 css.summaryContent,
                 MuiTypography()("Collapsible Group Item #2")
@@ -74,11 +74,11 @@ object CustomizedExpansionPanel extends ScalaCssReactImplicits {
                 )
               )
             ),
-            MuiExpansionPanel(square = true, expanded = state.isPanel3)(
+            MuiAccordion(square = true, expanded = state.isPanel3)(
               css.panelRoot,
               css.panelExpanded,
               onChange --> handleChange("panel3"),
-              MuiExpansionPanelSummary()(
+              MuiAccordionSummary()(
                 css.summaryRoot,
                 css.summaryContent,
                 MuiTypography()("Collapsible Group Item #3")
