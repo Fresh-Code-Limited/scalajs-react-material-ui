@@ -2,10 +2,9 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiCardHeader extends ReactBridgeComponent with MuiCardHeaderExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -23,7 +22,8 @@ object MuiCardHeader extends ReactBridgeComponent with MuiCardHeaderExtensions {
     subheader: js.UndefOr[VdomNode] = js.undefined,
     subheaderTypographyProps: js.UndefOr[js.Object] = js.undefined,
     title: js.UndefOr[VdomNode] = js.undefined,
-    titleTypographyProps: js.UndefOr[js.Object] = js.undefined
+    titleTypographyProps: js.UndefOr[js.Object] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithPropsNoChildren = autoNoChildren
 
 }

@@ -3,10 +3,9 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiSwitch extends ReactBridgeComponent with MuiSwitchExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -24,7 +23,8 @@ object MuiSwitch extends ReactBridgeComponent with MuiSwitchExtensions {
     icon: js.UndefOr[VdomNode] = js.undefined,
     inputProps: js.UndefOr[js.Object] = js.undefined,
     inputRef: js.UndefOr[ComponentRefType] = js.undefined,
-    defaultChecked: js.UndefOr[Boolean] = js.undefined
+    defaultChecked: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithPropsNoChildren = autoNoChildren
 
 }

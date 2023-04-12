@@ -2,9 +2,9 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
 import io.kinoplan.scalajs.react.material.ui.core.internal.PaperClassKey
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiAppBar extends ReactBridgeComponent with MuiAppBarExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -16,10 +16,10 @@ object MuiAppBar extends ReactBridgeComponent with MuiAppBarExtensions {
   def apply(
     classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
     color: js.UndefOr[Color.Value] = js.undefined,
+    enableColorOnDark: js.UndefOr[Boolean] = js.undefined,
     position: js.UndefOr[Position.Value] = js.undefined,
     component: js.UndefOr[ComponentPropType] = js.undefined,
-    elevation: js.UndefOr[Int] = js.undefined,
-    square: js.UndefOr[Boolean] = js.undefined
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

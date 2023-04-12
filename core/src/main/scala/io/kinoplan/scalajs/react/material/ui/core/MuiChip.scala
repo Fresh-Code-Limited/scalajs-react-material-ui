@@ -2,12 +2,11 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.ReactEvent
 import japgolly.scalajs.react.facade.React
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiChip extends ReactBridgeComponent with MuiChipExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -26,7 +25,8 @@ object MuiChip extends ReactBridgeComponent with MuiChipExtensions {
     icon: js.UndefOr[React.Element] = js.undefined,
     label: js.UndefOr[VdomNode] = js.undefined,
     onDelete: js.UndefOr[ReactHandler1[ReactEvent]] = js.undefined,
-    variant: js.UndefOr[Variant.Value] = js.undefined
+    variant: js.UndefOr[Variant.Value] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithPropsNoChildren = autoNoChildren
 
 }

@@ -2,9 +2,9 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
 import io.kinoplan.scalajs.react.material.ui.core.internal.PaperClassKey
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiAccordion extends ReactBridgeComponent with MuiAccordionExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -22,8 +22,7 @@ object MuiAccordion extends ReactBridgeComponent with MuiAccordionExtensions {
     expanded: js.UndefOr[Boolean] = js.undefined,
     onChange: js.UndefOr[js.Function] = js.undefined,
     component: js.UndefOr[ComponentPropType] = js.undefined,
-    elevation: js.UndefOr[Int] = js.undefined,
-    square: js.UndefOr[Boolean] = js.undefined
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

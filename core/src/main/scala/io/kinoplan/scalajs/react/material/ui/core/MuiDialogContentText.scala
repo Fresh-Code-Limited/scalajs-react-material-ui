@@ -2,8 +2,8 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiDialogContentText extends ReactBridgeComponent with MuiDialogContentTextExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -23,7 +23,8 @@ object MuiDialogContentText extends ReactBridgeComponent with MuiDialogContentTe
     internalDeprecatedVariant: js.UndefOr[Boolean] = js.undefined,
     noWrap: js.UndefOr[Boolean] = js.undefined,
     paragraph: js.UndefOr[Boolean] = js.undefined,
-    variant: js.UndefOr[Variant.Value] = js.undefined
+    variant: js.UndefOr[Variant.Value] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

@@ -2,8 +2,8 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiInputLabel extends ReactBridgeComponent with MuiInputLabelExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -22,7 +22,8 @@ object MuiInputLabel extends ReactBridgeComponent with MuiInputLabelExtensions {
     shrink: js.UndefOr[Boolean] = js.undefined,
     variant: js.UndefOr[Variant.Value] = js.undefined,
     component: js.UndefOr[ComponentPropType] = js.undefined,
-    filled: js.UndefOr[Boolean] = js.undefined
+    filled: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

@@ -2,8 +2,8 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiPaper extends ReactBridgeComponent with MuiPaperExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -16,7 +16,8 @@ object MuiPaper extends ReactBridgeComponent with MuiPaperExtensions {
     classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
     component: js.UndefOr[ComponentPropType] = js.undefined,
     elevation: js.UndefOr[Int] = js.undefined,
-    square: js.UndefOr[Boolean] = js.undefined
+    square: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

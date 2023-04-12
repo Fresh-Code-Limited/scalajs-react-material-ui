@@ -52,12 +52,12 @@ case class LayoutStyle(common: CommonStyle = DefaultCommonStyle) extends StyleSh
 
   val toolbarCustom = style(
     minHeight(56.px),
-    media.minWidth(theme.breakpoints.values.xs.px).landscape(
-      minHeight(48.px)
-    ),
-    media.minWidth(600.px)(
-      minHeight(64.px)
-    )
+//    media.minWidth(theme.breakpoints.values.xs.px).landscape(
+//      minHeight(48.px)
+//    ),
+//    media.minWidth(600.px)(
+//      minHeight(64.px)
+//    )
   )
 
   val appBar = style(
@@ -81,23 +81,23 @@ case class LayoutStyle(common: CommonStyle = DefaultCommonStyle) extends StyleSh
   )
 
   val drawer = style(
-    width(drawerWidth.px),
+//    width(drawerWidth.px),
     flexShrink(0),
     whiteSpace.nowrap
   )
 
   val drawerPaperOpen = style(
-    width(drawerWidth.px),
+//    width(drawerWidth.px),
     transition := drawerPaperOpenTransition
   )
 
   val drawerPaperClose = style(
     overflowX.hidden,
     transition := drawerPaperCloseTransition,
-    width((theme.spacing.unit * 7 + 1).px),
-    media.minWidth(theme.breakpoints.values.sm.px)(
-      width((theme.spacing.unit * 9 + 1).px)
-    )
+    width((common.spacingUnit * 7 + 1).px),
+//    media.minWidth(theme.breakpoints.values.sm.px)(
+//      width((common.spacingUnit * 9 + 1).px)
+//    )
   )
 
   val toolbar = style(
@@ -110,7 +110,7 @@ case class LayoutStyle(common: CommonStyle = DefaultCommonStyle) extends StyleSh
 
   val content = style(
     flexGrow(1),
-    padding((theme.spacing.unit * 3).px)
+    padding((common.spacingUnit * 3).px)
   )
 
   val button = style(

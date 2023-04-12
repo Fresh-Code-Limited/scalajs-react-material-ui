@@ -2,10 +2,9 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.vdom.all._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiCheckbox extends ReactBridgeComponent with MuiCheckboxExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -24,7 +23,8 @@ object MuiCheckbox extends ReactBridgeComponent with MuiCheckboxExtensions {
     indeterminateIcon: js.UndefOr[VdomNode] = js.undefined,
     inputProps: js.UndefOr[js.Object] = js.undefined,
     inputRef: js.UndefOr[ComponentRefType] = js.undefined,
-    defaultChecked: js.UndefOr[Boolean] = js.undefined
+    defaultChecked: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithPropsNoChildren = autoNoChildren
 
 }

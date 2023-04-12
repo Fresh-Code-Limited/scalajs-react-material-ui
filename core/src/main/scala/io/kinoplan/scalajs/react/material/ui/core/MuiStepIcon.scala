@@ -2,10 +2,9 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiStepIcon extends ReactBridgeComponent with MuiStepIconExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -19,7 +18,8 @@ object MuiStepIcon extends ReactBridgeComponent with MuiStepIconExtensions {
     classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
     completed: js.UndefOr[Boolean] = js.undefined,
     error: js.UndefOr[Boolean] = js.undefined,
-    icon: VdomNode
+    icon: VdomNode,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithPropsNoChildren = autoNoChildren
 
 }

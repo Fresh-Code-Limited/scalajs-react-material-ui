@@ -2,10 +2,9 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.vdom.VdomNode
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiBadge extends ReactBridgeComponent with MuiBadgeExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -22,7 +21,8 @@ object MuiBadge extends ReactBridgeComponent with MuiBadgeExtensions {
     invisible: js.UndefOr[Boolean] = js.undefined,
     max: js.UndefOr[Int] = js.undefined,
     showZero: js.UndefOr[Boolean] = js.undefined,
-    variant: js.UndefOr[Variant.Value] = js.undefined
+    variant: js.UndefOr[Variant.Value] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

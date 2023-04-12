@@ -2,8 +2,8 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiStep extends ReactBridgeComponent with MuiStepExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -15,7 +15,8 @@ object MuiStep extends ReactBridgeComponent with MuiStepExtensions {
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,
     classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
-    completed: js.UndefOr[Boolean] = js.undefined
+    completed: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

@@ -2,8 +2,8 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiMenuItem extends ReactBridgeComponent with MuiMenuItemExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -21,7 +21,8 @@ object MuiMenuItem extends ReactBridgeComponent with MuiMenuItemExtensions {
     ContainerComponent: js.UndefOr[ComponentPropType] = js.undefined,
     ContainerProps: js.UndefOr[js.Object] = js.undefined,
     dense: js.UndefOr[Boolean] = js.undefined,
-    divider: js.UndefOr[Boolean] = js.undefined
+    divider: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

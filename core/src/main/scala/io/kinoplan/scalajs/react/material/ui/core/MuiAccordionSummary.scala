@@ -1,6 +1,7 @@
 package io.kinoplan.scalajs.react.material.ui.core
 
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 import japgolly.scalajs.react.vdom.html_<^._
 
 import scala.scalajs.js
@@ -16,6 +17,7 @@ object MuiAccordionSummary extends ReactBridgeComponent with MuiAccordionSummary
   def apply(
     classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
     expandIcon: js.UndefOr[VdomNode] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

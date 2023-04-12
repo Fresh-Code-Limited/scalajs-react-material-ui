@@ -2,10 +2,9 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiStepLabel extends ReactBridgeComponent with MuiStepLabelExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -20,7 +19,8 @@ object MuiStepLabel extends ReactBridgeComponent with MuiStepLabelExtensions {
     icon: js.UndefOr[VdomNode] = js.undefined,
     optional: js.UndefOr[VdomNode] = js.undefined,
     StepIconComponent: js.UndefOr[ComponentPropType] = js.undefined,
-    StepIconProps: js.UndefOr[js.Object] = js.undefined
+    StepIconProps: js.UndefOr[js.Object] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

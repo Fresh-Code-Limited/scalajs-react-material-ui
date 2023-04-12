@@ -3,10 +3,9 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiTextField extends ReactBridgeComponent with MuiTextFieldExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -33,7 +32,8 @@ object MuiTextField extends ReactBridgeComponent with MuiTextFieldExtensions {
     SelectProps: js.UndefOr[js.Object] = js.undefined,
     variant: js.UndefOr[Variant.Value] = js.undefined,
     classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
-    component: js.UndefOr[ComponentPropType] = js.undefined
+    component: js.UndefOr[ComponentPropType] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

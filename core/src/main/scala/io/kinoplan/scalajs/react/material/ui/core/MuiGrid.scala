@@ -3,8 +3,8 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiGrid extends ReactBridgeComponent with MuiGridExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -29,7 +29,8 @@ object MuiGrid extends ReactBridgeComponent with MuiGridExtensions {
     wrap: js.UndefOr[Wrap.Value] = js.undefined,
     xl: js.UndefOr[Boolean | Int] = js.undefined,
     xs: js.UndefOr[Boolean | Int] = js.undefined,
-    zeroMinWidth: js.UndefOr[Boolean] = js.undefined
+    zeroMinWidth: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

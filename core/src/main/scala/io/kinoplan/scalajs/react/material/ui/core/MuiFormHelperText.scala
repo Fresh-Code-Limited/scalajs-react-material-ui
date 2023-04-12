@@ -2,8 +2,8 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiFormHelperText extends ReactBridgeComponent with MuiFormHelperTextExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -19,7 +19,8 @@ object MuiFormHelperText extends ReactBridgeComponent with MuiFormHelperTextExte
     filled: js.UndefOr[Boolean] = js.undefined,
     focused: js.UndefOr[Boolean] = js.undefined,
     margin: js.UndefOr[Margin.Value] = js.undefined,
-    variant: js.UndefOr[Variant.Value] = js.undefined
+    variant: js.UndefOr[Variant.Value] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

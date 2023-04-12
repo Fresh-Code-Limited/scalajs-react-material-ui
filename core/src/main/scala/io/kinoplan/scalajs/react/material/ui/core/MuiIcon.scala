@@ -2,8 +2,8 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiIcon extends ReactBridgeComponent with MuiIconExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -16,7 +16,8 @@ object MuiIcon extends ReactBridgeComponent with MuiIconExtensions {
     classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
     color: js.UndefOr[Color.Value] = js.undefined,
     component: js.UndefOr[ComponentPropType] = js.undefined,
-    fontSize: js.UndefOr[FontSize.Value] = js.undefined
+    fontSize: js.UndefOr[FontSize.Value] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

@@ -14,22 +14,24 @@ import io.kinoplan.scalajs.react.material.ui.core.system.{
 class CommonStyle extends StyleSheet.Inline {
   import dsl._
 
+  val spacingUnit = 1
   def theme: Theme = Layout.defaultTheme.getOrElse(
     createTheme(
       options = ThemeOptions(
         typography = TypographyOptions(useNextVariants = true),
-        palette = PaletteOptions(primary = colors.blue)
+        palette = PaletteOptions(primary = colors.blue),
+        spacing = spacingUnit,
       )
     )
   )
 
   val gutters = style(
-    paddingLeft((theme.spacing.unit * 2).px),
-    paddingRight((theme.spacing.unit * 2).px),
-    media.minWidth(theme.breakpoints.values.sm.px)(
-      paddingLeft((theme.spacing.unit * 3).px),
-      paddingRight((theme.spacing.unit * 3).px)
-    )
+    paddingLeft((spacingUnit * 2).px),
+    paddingRight((spacingUnit * 2).px),
+//    media.minWidth(theme.breakpoints.values.sm.px)(
+//      paddingLeft((spacingUnit * 3).px),
+//      paddingRight((spacingUnit * 3).px)
+//    )
   )
 
   val emptyStyle = style()
@@ -39,7 +41,7 @@ class CommonStyle extends StyleSheet.Inline {
   )
 
   val menuButton = style(
-    marginRight((theme.spacing.unit * 2).px)
+    marginRight((spacingUnit * 2).px)
   )
 
   val menuButtonDesktop = style(
@@ -67,16 +69,16 @@ class CommonStyle extends StyleSheet.Inline {
     borderRadius(theme.shape.borderRadius.px),
     display.flex,
     justifyContent.center,
-    paddingTop((theme.spacing.unit * 2).px),
-    paddingBottom((theme.spacing.unit * 2).px),
-    paddingLeft((theme.spacing.unit * 2).px),
-    paddingRight((theme.spacing.unit * 2).px),
-    media.minWidth(theme.breakpoints.values.sm.px)(
-      paddingLeft((theme.spacing.unit * 3).px),
-      paddingRight((theme.spacing.unit * 3).px),
-      paddingTop((theme.spacing.unit * 6).px),
-      paddingBottom((theme.spacing.unit * 3).px)
-    )
+    paddingTop((spacingUnit * 2).px),
+    paddingBottom((spacingUnit * 2).px),
+    paddingLeft((spacingUnit * 2).px),
+    paddingRight((spacingUnit * 2).px),
+//    media.minWidth(theme.breakpoints.values.sm.px)(
+//      paddingLeft((spacingUnit * 3).px),
+//      paddingRight((spacingUnit * 3).px),
+//      paddingTop((spacingUnit * 6).px),
+//      paddingBottom((spacingUnit * 3).px)
+//    )
   )
 
   val demoPaper = styleF.bool(isLight =>
@@ -90,10 +92,10 @@ class CommonStyle extends StyleSheet.Inline {
   )
 
   val demoHiddenHeader = style(
-    paddingTop((theme.spacing.unit * 2).px),
-    media.minWidth(theme.breakpoints.values.sm.px)(
-      paddingTop((theme.spacing.unit * 3).px)
-    )
+    paddingTop((spacingUnit * 2).px),
+//    media.minWidth(theme.breakpoints.values.sm.px)(
+//      paddingTop((spacingUnit * 3).px)
+//    )
   )
 
   val avatar = style(

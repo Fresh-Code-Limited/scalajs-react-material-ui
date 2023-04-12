@@ -2,8 +2,8 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiLink extends ReactBridgeComponent with MuiLinkExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -26,7 +26,8 @@ object MuiLink extends ReactBridgeComponent with MuiLinkExtensions {
     inline: js.UndefOr[Boolean] = js.undefined,
     internalDeprecatedVariant: js.UndefOr[Boolean] = js.undefined,
     noWrap: js.UndefOr[Boolean] = js.undefined,
-    paragraph: js.UndefOr[Boolean] = js.undefined
+    paragraph: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

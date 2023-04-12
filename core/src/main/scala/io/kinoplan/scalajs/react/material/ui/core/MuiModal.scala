@@ -2,10 +2,9 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.ReactEvent
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiModal extends ReactBridgeComponent with MuiModalExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -32,7 +31,8 @@ object MuiModal extends ReactBridgeComponent with MuiModalExtensions {
     onClose: js.UndefOr[ReactHandler2[ReactEvent, String]] = js.undefined,
     onEscapeKeyDown: js.UndefOr[ReactHandler1[ReactEvent]] = js.undefined,
     onRendered: js.UndefOr[JsFun0] = js.undefined,
-    open: Boolean
+    open: Boolean,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

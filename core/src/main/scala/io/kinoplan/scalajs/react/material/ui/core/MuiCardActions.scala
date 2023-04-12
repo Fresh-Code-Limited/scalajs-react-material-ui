@@ -2,8 +2,8 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiCardActions extends ReactBridgeComponent with MuiCardActionsExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -14,7 +14,8 @@ object MuiCardActions extends ReactBridgeComponent with MuiCardActionsExtensions
 
   def apply(
     classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
-    disableActionSpacing: js.UndefOr[Boolean] = js.undefined
+    disableActionSpacing: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

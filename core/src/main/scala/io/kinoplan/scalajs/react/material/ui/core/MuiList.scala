@@ -2,10 +2,9 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiList extends ReactBridgeComponent with MuiListExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -19,7 +18,8 @@ object MuiList extends ReactBridgeComponent with MuiListExtensions {
     component: js.UndefOr[ComponentPropType] = js.undefined,
     dense: js.UndefOr[Boolean] = js.undefined,
     disablePadding: js.UndefOr[Boolean] = js.undefined,
-    subheader: js.UndefOr[VdomNode] = js.undefined
+    subheader: js.UndefOr[VdomNode] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

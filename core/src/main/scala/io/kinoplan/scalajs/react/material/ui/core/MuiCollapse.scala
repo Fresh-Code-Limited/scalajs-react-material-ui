@@ -3,10 +3,9 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import org.scalajs.dom.html
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiCollapse extends ReactBridgeComponent with MuiCollapseExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -31,7 +30,8 @@ object MuiCollapse extends ReactBridgeComponent with MuiCollapseExtensions {
     onEntered: js.UndefOr[Handler1[html.Element]] = js.undefined,
     onExit: js.UndefOr[Handler1[html.Element]] = js.undefined,
     onExiting: js.UndefOr[Handler1[html.Element]] = js.undefined,
-    onExited: js.UndefOr[Handler1[html.Element]] = js.undefined
+    onExited: js.UndefOr[Handler1[html.Element]] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }
