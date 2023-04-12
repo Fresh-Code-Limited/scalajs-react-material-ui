@@ -2,13 +2,13 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiListSubheader extends ReactBridgeComponent with MuiListSubheaderExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "ListSubheader")
+  @JSImport("@mui/material", "ListSubheader")
   @js.native
   object RawComponent extends js.Function
 
@@ -18,7 +18,8 @@ object MuiListSubheader extends ReactBridgeComponent with MuiListSubheaderExtens
     component: js.UndefOr[ComponentPropType] = js.undefined,
     disableGutters: js.UndefOr[Boolean] = js.undefined,
     disableSticky: js.UndefOr[Boolean] = js.undefined,
-    inset: js.UndefOr[Boolean] = js.undefined
+    inset: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

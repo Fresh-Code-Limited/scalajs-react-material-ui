@@ -2,18 +2,19 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiStepConnector extends ReactBridgeComponent with MuiStepConnectorExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "StepConnector")
+  @JSImport("@mui/material", "StepConnector")
   @js.native
   object RawComponent extends js.Function
 
   def apply(
-    classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined
+    classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithPropsNoChildren = autoNoChildren
 
 }

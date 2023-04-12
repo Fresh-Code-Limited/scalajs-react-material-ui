@@ -1,23 +1,27 @@
 object DependenciesNPM {
 
   object Versions {
-    val reactV               = "17.0.2"
+    val reactV               = "18.2.0"
+    val reactDomV            = "18.2.0"
     val reactSwipeableViewsV = "0.14.0"
   }
 
   import Versions._
 
   // A -> Z
-  val materialUiCore                = "@material-ui/core"                  -> "3.9.4"
-  val materialUiIcons               = "@material-ui/icons"                 -> "3.0.2"
-  val materialUiLab                 = "@material-ui/lab"                   -> "3.0.0-alpha.30"
+  val materialUiCore                = "@mui/material"                      -> "5.11.16"
+  val materialUiSystem              = "@mui/system"                        -> "5.11.16"
+  val materialUiIcons               = "@mui/icons-material"                -> "5.11.16"
+  val materialUiLab                 = "@mui/lab"                           -> "5.0.0-alpha.119"
   val react                         = "react"                              -> reactV
-  val reactDom                      = "react-dom"                          -> reactV
+  val reactDom                      = "react-dom"                          -> reactDomV
   val reactSwipeableViews           = "react-swipeable-views"              -> reactSwipeableViewsV
   val reactSwipeableViewsUtils      = "react-swipeable-views-utils"        -> reactSwipeableViewsV
-  val typesReact                    = "@types/react"                       -> "17.0.38"
-  val typesReactDom                 = "@types/react-dom"                   -> "17.0.11"
+  val typesReact                    = "@types/react"                       -> "18.0.10"
+  val typesReactDom                 = "@types/react-dom"                   -> "18.0.10"
   val typesReactSwipeableViews      = "@types/react-swipeable-views"       -> "0.13.1"
   val typesReactSwipeableViewsUtils = "@types/react-swipeable-views-utils" -> "0.13.3"
+  val emotionReact                  = "@emotion/react"                     -> "11.10.5"
+  val emotionStyled                 = "@emotion/styled"                    -> "11.10.5"
 
 }

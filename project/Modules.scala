@@ -16,7 +16,9 @@ object Modules {
         Seq(
           DependenciesNPM.react,
           DependenciesNPM.reactDom,
-          DependenciesNPM.materialUiCore
+          DependenciesNPM.materialUiCore,
+          DependenciesNPM.emotionReact,
+          DependenciesNPM.emotionStyled
         ),
       Compile / npmResolutions ++=
         (Compile / npmDependencies).value.toMap
@@ -33,7 +35,9 @@ object Modules {
           DependenciesNPM.react,
           DependenciesNPM.reactDom,
           DependenciesNPM.materialUiCore,
-          DependenciesNPM.materialUiIcons
+          DependenciesNPM.materialUiIcons,
+          DependenciesNPM.emotionReact,
+          DependenciesNPM.emotionStyled
         ),
       Compile / npmResolutions ++=
         (Compile / npmDependencies).value.toMap
@@ -50,7 +54,9 @@ object Modules {
           DependenciesNPM.react,
           DependenciesNPM.reactDom,
           DependenciesNPM.materialUiCore,
-          DependenciesNPM.materialUiLab
+          DependenciesNPM.materialUiLab,
+          DependenciesNPM.emotionReact,
+          DependenciesNPM.emotionStyled
         ),
       Compile / npmResolutions ++=
         (Compile / npmDependencies).value.toMap
@@ -80,10 +86,10 @@ object Modules {
       stIgnore ++=
         List(
           "react-dom",
-          "@material-ui/core",
-          "@material-ui/icons",
-          "@material-ui/lab",
-          "@material-ui/types"
+          "@mui/material",
+          "@mui/icons-material",
+          "@mui/lab",
+          "@mui/types"
         ),
       stOutputPackage := "io.kinoplan.scalajs.react.libs.external"
     )

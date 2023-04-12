@@ -3,17 +3,16 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import japgolly.scalajs.react.ReactEvent
 import japgolly.scalajs.react.facade.React
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiFormControlLabel extends ReactBridgeComponent with MuiFormControlLabelExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "FormControlLabel")
+  @JSImport("@mui/material", "FormControlLabel")
   @js.native
   object RawComponent extends js.Function
 
@@ -24,7 +23,8 @@ object MuiFormControlLabel extends ReactBridgeComponent with MuiFormControlLabel
     inputRef: js.UndefOr[ComponentRefType] = js.undefined,
     label: js.UndefOr[VdomNode] = js.undefined,
     labelPlacement: js.UndefOr[LabelPlacement.Value] = js.undefined,
-    onChange: js.UndefOr[ReactHandler2[ReactEvent, Boolean]] = js.undefined
+    onChange: js.UndefOr[ReactHandler2[ReactEvent, Boolean]] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithPropsNoChildren = autoNoChildren
 
 }

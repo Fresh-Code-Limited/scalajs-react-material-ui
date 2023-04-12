@@ -2,13 +2,13 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiSvgIcon extends ReactBridgeComponent with MuiSvgIconExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "SvgIcon")
+  @JSImport("@mui/material", "SvgIcon")
   @js.native
   object RawComponent extends js.Function
 
@@ -20,7 +20,8 @@ object MuiSvgIcon extends ReactBridgeComponent with MuiSvgIconExtensions {
     nativeColor: js.UndefOr[String] = js.undefined,
     shapeRendering: js.UndefOr[String] = js.undefined,
     titleAccess: js.UndefOr[String] = js.undefined,
-    viewBox: js.UndefOr[String] = js.undefined
+    viewBox: js.UndefOr[String] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

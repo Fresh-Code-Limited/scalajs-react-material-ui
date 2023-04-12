@@ -2,15 +2,14 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiSnackbarContent extends ReactBridgeComponent with MuiSnackbarContentExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "SnackbarContent")
+  @JSImport("@mui/material", "SnackbarContent")
   @js.native
   object RawComponent extends js.Function
 
@@ -20,7 +19,8 @@ object MuiSnackbarContent extends ReactBridgeComponent with MuiSnackbarContentEx
     message: js.UndefOr[VdomNode] = js.undefined,
     component: js.UndefOr[ComponentPropType] = js.undefined,
     elevation: js.UndefOr[Int] = js.undefined,
-    square: js.UndefOr[Boolean] = js.undefined
+    square: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithPropsNoChildren = autoNoChildren
 
 }

@@ -3,17 +3,16 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import japgolly.scalajs.react.ReactEvent
 import org.scalajs.dom.html
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
 import io.kinoplan.scalajs.react.material.ui.core.internal.Origin
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiMenu extends ReactBridgeComponent with MuiMenuExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "Menu")
+  @JSImport("@mui/material", "Menu")
   @js.native
   object RawComponent extends js.Function
 
@@ -57,7 +56,8 @@ object MuiMenu extends ReactBridgeComponent with MuiMenuExtensions {
     keepMounted: js.UndefOr[Boolean] = js.undefined,
     onBackdropClick: js.UndefOr[ReactHandler1[ReactEvent]] = js.undefined,
     onEscapeKeyDown: js.UndefOr[ReactHandler1[ReactEvent]] = js.undefined,
-    onRendered: js.UndefOr[JsFun0] = js.undefined
+    onRendered: js.UndefOr[JsFun0] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

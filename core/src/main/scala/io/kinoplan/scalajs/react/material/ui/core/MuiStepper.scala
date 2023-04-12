@@ -2,16 +2,15 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.facade.React
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
 import io.kinoplan.scalajs.react.material.ui.core.internal.PaperClassKey
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiStepper extends ReactBridgeComponent with MuiStepperExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "Stepper")
+  @JSImport("@mui/material", "Stepper")
   @js.native
   object RawComponent extends js.Function
 
@@ -24,7 +23,8 @@ object MuiStepper extends ReactBridgeComponent with MuiStepperExtensions {
     orientation: js.UndefOr[Orientation.Value] = js.undefined,
     component: js.UndefOr[ComponentPropType] = js.undefined,
     elevation: js.UndefOr[Int] = js.undefined,
-    square: js.UndefOr[Boolean] = js.undefined
+    square: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

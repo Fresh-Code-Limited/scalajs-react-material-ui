@@ -2,13 +2,13 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiFormControl extends ReactBridgeComponent with MuiFormControlExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "FormControl")
+  @JSImport("@mui/material", "FormControl")
   @js.native
   object RawComponent extends js.Function
 
@@ -18,7 +18,8 @@ object MuiFormControl extends ReactBridgeComponent with MuiFormControlExtensions
     error: js.UndefOr[Boolean] = js.undefined,
     fullWidth: js.UndefOr[Boolean] = js.undefined,
     margin: js.UndefOr[Margin.Value] = js.undefined,
-    variant: js.UndefOr[Variant.Value] = js.undefined
+    variant: js.UndefOr[Variant.Value] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

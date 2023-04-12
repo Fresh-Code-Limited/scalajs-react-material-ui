@@ -3,13 +3,13 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiGrid extends ReactBridgeComponent with MuiGridExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "Grid")
+  @JSImport("@mui/material", "Grid")
   @js.native
   object RawComponent extends js.Function
 
@@ -25,11 +25,12 @@ object MuiGrid extends ReactBridgeComponent with MuiGridExtensions {
     lg: js.UndefOr[Boolean | Int] = js.undefined,
     md: js.UndefOr[Boolean | Int] = js.undefined,
     sm: js.UndefOr[Boolean | Int] = js.undefined,
-    spacing: js.UndefOr[Spacing.Value] = js.undefined,
+    spacing: js.UndefOr[Double | String] = js.undefined,
     wrap: js.UndefOr[Wrap.Value] = js.undefined,
     xl: js.UndefOr[Boolean | Int] = js.undefined,
     xs: js.UndefOr[Boolean | Int] = js.undefined,
-    zeroMinWidth: js.UndefOr[Boolean] = js.undefined
+    zeroMinWidth: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }
@@ -75,17 +76,6 @@ trait MuiGridExtensions {
     val spaceBetween = "space-between"
     val spaceAround = "space-around"
     val spaceEvenly = "space-evenly"
-  }
-
-  object Spacing extends Enumeration {
-    type Value = Int
-
-    val `0` = 0
-    val `8` = 8
-    val `16` = 16
-    val `24` = 24
-    val `32` = 32
-    val `40` = 40
   }
 
   object Wrap extends Enumeration {

@@ -7,10 +7,10 @@
 ![build](https://github.com/Fresh-Code-Limited/scalajs-react-material-ui/workflows/build/badge.svg)
 [![Mergify Status](https://img.shields.io/endpoint.svg?url=https://api.mergify.com/v1/badges/Fresh-Code-Limited/utils?style=flat)](https://mergify.com)
 [![Scala Steward badge](https://img.shields.io/badge/Scala_Steward-helping-blue.svg?style=flat\&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAMAAAARSr4IAAAAVFBMVEUAAACHjojlOy5NWlrKzcYRKjGFjIbp293YycuLa3pYY2LSqql4f3pCUFTgSjNodYRmcXUsPD/NTTbjRS+2jomhgnzNc223cGvZS0HaSD0XLjbaSjElhIr+AAAAAXRSTlMAQObYZgAAAHlJREFUCNdNyosOwyAIhWHAQS1Vt7a77/3fcxxdmv0xwmckutAR1nkm4ggbyEcg/wWmlGLDAA3oL50xi6fk5ffZ3E2E3QfZDCcCN2YtbEWZt+Drc6u6rlqv7Uk0LdKqqr5rk2UCRXOk0vmQKGfc94nOJyQjouF9H/wCc9gECEYfONoAAAAASUVORK5CYII=)](https://scala-steward.org)
-[![Scala.js](https://www.scala-js.org/assets/badges/scalajs-1.8.0.svg)](https://www.scala-js.org/)
-[![react](https://img.shields.io/badge/react-17.0.2-61DAFB.svg?logo=React)](https://ru.reactjs.org/)
-[![scalajs-react](https://img.shields.io/static/v1?label=scalajs-react&message=2.0.0&color=blue)](https://github.com/japgolly/scalajs-react)
-[![material-ui](https://img.shields.io/static/v1?label=material-ui&message=3.9.4&color=e52b50)](https://v3.material-ui.com/)
+[![Scala.js](https://www.scala-js.org/assets/badges/scalajs-1.13.0.svg)](https://www.scala-js.org/)
+[![react](https://img.shields.io/badge/react-18.0.10-61DAFB.svg?logo=React)](https://ru.reactjs.org/)
+[![scalajs-react](https://img.shields.io/static/v1?label=scalajs-react&message=2.1.1&color=blue)](https://github.com/japgolly/scalajs-react)
+[![material-ui](https://img.shields.io/static/v1?label=material-ui&message=5.11.8&color=e52b50)](https://v3.material-ui.com/)
 [![Maven Central](https://img.shields.io/maven-central/v/com.freshcodelimited/scalajs-react-material-ui-core_sjs1_2.13.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.freshcodelimited%22%20AND%20(a:%22scalajs-react-material-ui-core_sjs1_2.13%22%20OR%20a:%22scalajs-react-material-ui-icons_sjs1_2.13%22%20OR%20a:%22scalajs-react-material-ui-lab_sjs1_2.13%22))
 
 </div>
@@ -38,9 +38,9 @@ The scalajs-react-material-ui libraries is currently available for Scala.js 1.8.
 
     ```scala
     npmDependencies in Compile ++= Seq(
-      "@material-ui/core"  -> "3.9.4",
-      "@material-ui/icons" -> "3.0.2",
-      "@material-ui/lab"   -> "3.0.0-alpha.30"
+      "@material-ui/core"  -> "5.11.8",
+      "@material-ui/icons" -> "5.11.0",
+      "@material-ui/lab"   -> "5.0.0-alpha.119"
     )
     ```
 

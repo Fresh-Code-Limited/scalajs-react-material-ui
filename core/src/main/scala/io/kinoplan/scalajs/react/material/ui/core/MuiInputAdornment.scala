@@ -2,13 +2,13 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiInputAdornment extends ReactBridgeComponent with MuiInputAdornmentExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "InputAdornment")
+  @JSImport("@mui/material", "InputAdornment")
   @js.native
   object RawComponent extends js.Function
 
@@ -18,7 +18,8 @@ object MuiInputAdornment extends ReactBridgeComponent with MuiInputAdornmentExte
     disablePointerEvents: js.UndefOr[Boolean] = js.undefined,
     disableTypography: js.UndefOr[Boolean] = js.undefined,
     position: js.UndefOr[Position.Value] = js.undefined,
-    variant: js.UndefOr[Variant.Value] = js.undefined
+    variant: js.UndefOr[Variant.Value] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

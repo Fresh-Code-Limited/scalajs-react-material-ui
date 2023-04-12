@@ -2,13 +2,13 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiFormLabel extends ReactBridgeComponent with MuiFormLabelExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "FormLabel")
+  @JSImport("@mui/material", "FormLabel")
   @js.native
   object RawComponent extends js.Function
 
@@ -17,7 +17,8 @@ object MuiFormLabel extends ReactBridgeComponent with MuiFormLabelExtensions {
     component: js.UndefOr[ComponentPropType] = js.undefined,
     error: js.UndefOr[Boolean] = js.undefined,
     filled: js.UndefOr[Boolean] = js.undefined,
-    focused: js.UndefOr[Boolean] = js.undefined
+    focused: js.UndefOr[Boolean] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

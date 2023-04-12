@@ -3,18 +3,17 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import japgolly.scalajs.react.ReactEvent
 import japgolly.scalajs.react.vdom.html_<^._
 import org.scalajs.dom.html
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
 import io.kinoplan.scalajs.react.material.ui.core.internal.Origin
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiSnackbar extends ReactBridgeComponent with MuiSnackbarExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "Snackbar")
+  @JSImport("@mui/material", "Snackbar")
   @js.native
   object RawComponent extends js.Function
 
@@ -38,7 +37,8 @@ object MuiSnackbar extends ReactBridgeComponent with MuiSnackbarExtensions {
     resumeHideDuration: js.UndefOr[Int] = js.undefined,
     TransitionComponent: js.UndefOr[ComponentPropType] = js.undefined,
     transitionDuration: js.UndefOr[Int | js.Object] = js.undefined,
-    TransitionProps: js.UndefOr[js.Object] = js.undefined
+    TransitionProps: js.UndefOr[js.Object] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

@@ -2,15 +2,14 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiStepButton extends ReactBridgeComponent with MuiStepButtonExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "StepButton")
+  @JSImport("@mui/material", "StepButton")
   @js.native
   object RawComponent extends js.Function
 
@@ -29,7 +28,8 @@ object MuiStepButton extends ReactBridgeComponent with MuiStepButtonExtensions {
     focusRipple: js.UndefOr[Boolean] = js.undefined,
     focusVisibleClassName: js.UndefOr[String] = js.undefined,
     onFocusVisible: js.UndefOr[js.Function] = js.undefined,
-    TouchRippleProps: js.UndefOr[js.Object] = js.undefined
+    TouchRippleProps: js.UndefOr[js.Object] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

@@ -2,13 +2,13 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiTableSortLabel extends ReactBridgeComponent with MuiTableSortLabelExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "TableSortLabel")
+  @JSImport("@mui/material", "TableSortLabel")
   @js.native
   object RawComponent extends js.Function
 
@@ -27,7 +27,8 @@ object MuiTableSortLabel extends ReactBridgeComponent with MuiTableSortLabelExte
     focusRipple: js.UndefOr[Boolean] = js.undefined,
     focusVisibleClassName: js.UndefOr[String] = js.undefined,
     onFocusVisible: js.UndefOr[js.Function] = js.undefined,
-    TouchRippleProps: js.UndefOr[js.Object] = js.undefined
+    TouchRippleProps: js.UndefOr[js.Object] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

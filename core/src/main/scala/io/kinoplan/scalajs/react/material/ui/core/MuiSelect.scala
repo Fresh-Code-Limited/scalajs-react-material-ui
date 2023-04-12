@@ -3,17 +3,16 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import japgolly.scalajs.react.ReactEventFromInput
 import japgolly.scalajs.react.facade.React
 import japgolly.scalajs.react.vdom.html_<^.VdomNode
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiSelect extends ReactBridgeComponent with MuiSelectExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "Select")
+  @JSImport("@mui/material", "Select")
   @js.native
   object RawComponent extends js.Function
 
@@ -43,7 +42,8 @@ object MuiSelect extends ReactBridgeComponent with MuiSelectExtensions {
     multiline: js.UndefOr[Boolean] = js.undefined,
     rows: js.UndefOr[String | Int] = js.undefined,
     rowsMax: js.UndefOr[String | Int] = js.undefined,
-    startAdornment: js.UndefOr[VdomNode] = js.undefined
+    startAdornment: js.UndefOr[VdomNode] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

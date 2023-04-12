@@ -2,15 +2,14 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.ReactEvent
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiTabs extends ReactBridgeComponent with MuiTabsExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "Tabs")
+  @JSImport("@mui/material", "Tabs")
   @js.native
   object RawComponent extends js.Function
 
@@ -25,7 +24,8 @@ object MuiTabs extends ReactBridgeComponent with MuiTabsExtensions {
     scrollButtons: js.UndefOr[ScrollButtons.Value] = js.undefined,
     TabIndicatorProps: js.UndefOr[js.Object] = js.undefined,
     textColor: js.UndefOr[TextColor.Value] = js.undefined,
-    variant: js.UndefOr[Variant.Value] = js.undefined
+    variant: js.UndefOr[Variant.Value] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

@@ -2,13 +2,13 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiButton extends ReactBridgeComponent with MuiButtonExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "Button")
+  @JSImport("@mui/material", "Button")
   @js.native
   object RawComponent extends js.Function
 
@@ -29,7 +29,8 @@ object MuiButton extends ReactBridgeComponent with MuiButtonExtensions {
     focusRipple: js.UndefOr[Boolean] = js.undefined,
     focusVisibleClassName: js.UndefOr[String] = js.undefined,
     onFocusVisible: js.UndefOr[js.Function] = js.undefined,
-    TouchRippleProps: js.UndefOr[js.Object] = js.undefined
+    TouchRippleProps: js.UndefOr[js.Object] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }
@@ -39,10 +40,13 @@ trait MuiButtonExtensions {
   object Color extends Enumeration {
     type Value = String
 
-    val default = "default"
     val inherit = "inherit"
     val primary = "primary"
     val secondary = "secondary"
+    val success = "success"
+    val error = "error"
+    val info = "info"
+    val warning = "warning"
   }
 
   object Size extends Enumeration {

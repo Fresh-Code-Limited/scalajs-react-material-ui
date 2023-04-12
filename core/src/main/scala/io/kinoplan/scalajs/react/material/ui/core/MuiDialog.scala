@@ -3,16 +3,15 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import japgolly.scalajs.react.ReactEvent
 import org.scalajs.dom.html
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiDialog extends ReactBridgeComponent with MuiDialogExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "Dialog")
+  @JSImport("@mui/material", "Dialog")
   @js.native
   object RawComponent extends js.Function
 
@@ -49,7 +48,8 @@ object MuiDialog extends ReactBridgeComponent with MuiDialogExtensions {
     disableRestoreFocus: js.UndefOr[Boolean] = js.undefined,
     hideBackdrop: js.UndefOr[Boolean] = js.undefined,
     keepMounted: js.UndefOr[Boolean] = js.undefined,
-    onRendered: js.UndefOr[JsFun0] = js.undefined
+    onRendered: js.UndefOr[JsFun0] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

@@ -3,15 +3,14 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiFilledInput extends ReactBridgeComponent with MuiFilledInputExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "FilledInput")
+  @JSImport("@mui/material", "FilledInput")
   @js.native
   object RawComponent extends js.Function
 
@@ -28,7 +27,8 @@ object MuiFilledInput extends ReactBridgeComponent with MuiFilledInputExtensions
     multiline: js.UndefOr[Boolean] = js.undefined,
     rows: js.UndefOr[String | Int] = js.undefined,
     rowsMax: js.UndefOr[String | Int] = js.undefined,
-    startAdornment: js.UndefOr[VdomNode] = js.undefined
+    startAdornment: js.UndefOr[VdomNode] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithPropsNoChildren = autoNoChildren
 
 }

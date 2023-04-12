@@ -3,17 +3,16 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import japgolly.scalajs.react.ReactEvent
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 import io.kinoplan.scalajs.react.material.ui.html.ReactEventFromNumberInput
 
 object MuiTablePagination extends ReactBridgeComponent with MuiTablePaginationExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "TablePagination")
+  @JSImport("@mui/material", "TablePagination")
   @js.native
   object RawComponent extends js.Function
 
@@ -36,7 +35,8 @@ object MuiTablePagination extends ReactBridgeComponent with MuiTablePaginationEx
     padding: js.UndefOr[Padding.Value] = js.undefined,
     scope: js.UndefOr[String] = js.undefined,
     sortDirection: js.UndefOr[Boolean | SortDirection.Value] = js.undefined,
-    variant: js.UndefOr[Variant.Value] = js.undefined
+    variant: js.UndefOr[Variant.Value] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithPropsNoChildren = autoNoChildren
 
 }

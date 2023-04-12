@@ -2,15 +2,14 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiTab extends ReactBridgeComponent with MuiTabExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "Tab")
+  @JSImport("@mui/material", "Tab")
   @js.native
   object RawComponent extends js.Function
 
@@ -27,7 +26,8 @@ object MuiTab extends ReactBridgeComponent with MuiTabExtensions {
     focusRipple: js.UndefOr[Boolean] = js.undefined,
     focusVisibleClassName: js.UndefOr[String] = js.undefined,
     onFocusVisible: js.UndefOr[js.Function] = js.undefined,
-    TouchRippleProps: js.UndefOr[js.Object] = js.undefined
+    TouchRippleProps: js.UndefOr[js.Object] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithPropsNoChildren = autoNoChildren
 
 }

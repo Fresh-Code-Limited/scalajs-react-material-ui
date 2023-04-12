@@ -2,13 +2,13 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiLinearProgress extends ReactBridgeComponent with MuiLinearProgressExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "LinearProgress")
+  @JSImport("@mui/material", "LinearProgress")
   @js.native
   object RawComponent extends js.Function
 
@@ -17,7 +17,8 @@ object MuiLinearProgress extends ReactBridgeComponent with MuiLinearProgressExte
     color: js.UndefOr[Color.Value] = js.undefined,
     value: js.UndefOr[Int] = js.undefined,
     valueBuffer: js.UndefOr[Int] = js.undefined,
-    variant: js.UndefOr[Variant.Value] = js.undefined
+    variant: js.UndefOr[Variant.Value] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithPropsNoChildren = autoNoChildren
 
 }

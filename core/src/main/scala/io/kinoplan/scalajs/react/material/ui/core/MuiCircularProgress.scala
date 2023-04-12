@@ -3,13 +3,13 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiCircularProgress extends ReactBridgeComponent with MuiCircularProgressExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "CircularProgress")
+  @JSImport("@mui/material", "CircularProgress")
   @js.native
   object RawComponent extends js.Function
 
@@ -20,7 +20,8 @@ object MuiCircularProgress extends ReactBridgeComponent with MuiCircularProgress
     size: js.UndefOr[Int | String] = js.undefined,
     thickness: js.UndefOr[Double] = js.undefined,
     value: js.UndefOr[Int] = js.undefined,
-    variant: js.UndefOr[Variant.Value] = js.undefined
+    variant: js.UndefOr[Variant.Value] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

@@ -2,15 +2,14 @@ package io.kinoplan.scalajs.react.material.ui.core
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
-
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiListItemText extends ReactBridgeComponent with MuiListItemTextExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "ListItemText")
+  @JSImport("@mui/material", "ListItemText")
   @js.native
   object RawComponent extends js.Function
 
@@ -21,7 +20,8 @@ object MuiListItemText extends ReactBridgeComponent with MuiListItemTextExtensio
     primary: js.UndefOr[VdomNode] = js.undefined,
     primaryTypographyProps: js.UndefOr[js.Object] = js.undefined,
     secondary: js.UndefOr[VdomNode] = js.undefined,
-    secondaryTypographyProps: js.UndefOr[js.Object] = js.undefined
+    secondaryTypographyProps: js.UndefOr[js.Object] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithProps = auto
 
 }

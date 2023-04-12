@@ -3,15 +3,14 @@ package io.kinoplan.scalajs.react.material.ui.core
 import scala.scalajs.js
 import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
-
 import japgolly.scalajs.react.vdom.html_<^._
-
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithPropsNoChildren}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 
 object MuiRadio extends ReactBridgeComponent with MuiRadioExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
 
-  @JSImport("@material-ui/core", "Radio")
+  @JSImport("@mui/material", "Radio")
   @js.native
   object RawComponent extends js.Function
 
@@ -23,7 +22,8 @@ object MuiRadio extends ReactBridgeComponent with MuiRadioExtensions {
     disableRipple: js.UndefOr[Boolean] = js.undefined,
     icon: js.UndefOr[VdomNode] = js.undefined,
     inputProps: js.UndefOr[js.Object] = js.undefined,
-    inputRef: js.UndefOr[ComponentRefType] = js.undefined
+    inputRef: js.UndefOr[ComponentRefType] = js.undefined,
+    sx: js.UndefOr[SxProps] = js.undefined,
   ): WithPropsNoChildren = autoNoChildren
 
 }

@@ -12,7 +12,8 @@ object ProjectSettings {
   lazy val commonProfile: Project => Project = _
     .enablePlugins(ScalaJSBundlerPlugin, ScalafixPlugin)
     .settings(
-      crossScalaVersions := Seq("2.13.8"),
+      version := sys.env.getOrElse("DRONE_BUILD_NUMBER", sys.env.getOrElse("BUILD_ID", "dev")),
+      crossScalaVersions := Seq("2.13.9"),
       scalaVersion := crossScalaVersions.value.last,
       webpackBundlingMode := BundlingMode.LibraryOnly(),
       useYarn := true,
