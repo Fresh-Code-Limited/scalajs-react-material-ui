@@ -32,6 +32,4 @@ jobs:
           key: ${{ runner.os }}-sbt-${{ hashFiles('build.sbt') }}-${{ hashFiles('project/*.scala') }}
           restore-keys: ${{ runner.os }}-sbt-
       - name: Publish
-        env:
-          SCALAJS_VERSION: 1.13.0
         run: sbt clean ci-release

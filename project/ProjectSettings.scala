@@ -9,13 +9,12 @@ object ProjectSettings {
 
   val isDemoEnabled: Boolean = Option(System.getenv("DEMO_ENABLED")).getOrElse("1").startsWith("1")
 
-  val customScalaJSVersion = Option(System.getenv("SCALAJS_VERSION"))
+//  val customScalaJSVersion = Option(System.getenv("SCALAJS_VERSION"))
 
   lazy val commonProfile: Project => Project = _
     .enablePlugins(ScalaJSBundlerPlugin, ScalafixPlugin)
     .settings(
-      version := sys.env.getOrElse("DRONE_BUILD_NUMBER", sys.env.getOrElse("BUILD_ID", "dev")),
-      crossScalaVersions := Seq("2.13.9"),
+      crossScalaVersions := Seq("2.13.10"),
       scalaVersion := crossScalaVersions.value.last,
       webpackBundlingMode := BundlingMode.LibraryOnly(),
       useYarn := true,
