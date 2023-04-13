@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.JSConverters._
 import scala.scalajs.js.|
 
-//deprecated?
 @js.native
 trait TypographyStyleOptions extends js.Object {
   def fontFamily: js.UndefOr[Int | String] = js.native

@@ -11,9 +11,12 @@ trait PaletteOptions extends js.Object {
   def primary: js.UndefOr[PaletteColorOptions | ColorPartial | Color] = js.native
   def secondary: js.UndefOr[PaletteColorOptions | ColorPartial | Color] = js.native
   def error: js.UndefOr[PaletteColorOptions | ColorPartial | Color] = js.native
-  def `type`: js.UndefOr[String] = js.native
-  def tonalOffset: js.UndefOr[Double] = js.native
-  def constrastThreshold: js.UndefOr[Int] = js.native
+  def warning: js.UndefOr[PaletteColorOptions | ColorPartial | Color] = js.native
+  def info: js.UndefOr[PaletteColorOptions | ColorPartial | Color] = js.native
+  def success: js.UndefOr[PaletteColorOptions | ColorPartial | Color] = js.native
+  def mode: js.UndefOr[PaletteMode.Value] = js.native
+  def tonalOffset: js.UndefOr[Double | PaletteTonalOffset.Value] = js.native
+  def contrastThreshold: js.UndefOr[Int] = js.native
   def common: js.UndefOr[CommonColorsPartial] = js.native
   def grey: js.UndefOr[ColorPartial] = js.native
   def text: js.UndefOr[TypeTextPartial] = js.native
@@ -21,6 +24,12 @@ trait PaletteOptions extends js.Object {
   def action: js.UndefOr[TypeActionPartial] = js.native
   def background: js.UndefOr[TypeBackgroundPartial] = js.native
   def getContrastText: js.UndefOr[js.Function1[String, String]] = js.native
+}
+
+object PaletteTonalOffset extends Enumeration {
+  type Value = String
+  val light = "light"
+  val dark = "dark"
 }
 
 object PaletteOptions {
