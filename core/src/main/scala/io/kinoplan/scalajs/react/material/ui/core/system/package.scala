@@ -62,7 +62,7 @@ package object system {
   }
 
   @JSImport(
-    "@mui/system/createTheme/createTheme.js",
+    "@mui/material/styles/createTheme.js",
     JSImport.Default
   )
   @js.native

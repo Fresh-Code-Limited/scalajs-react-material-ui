@@ -3,7 +3,6 @@ package io.kinoplan.scalajs.react.material.ui.core.system
 import scala.scalajs.js
 import scala.scalajs.js.JSConverters._
 
-//deprecated?
 @js.native
 trait TypeBackgroundPartial extends js.Object {
   def default: js.UndefOr[String] = js.native

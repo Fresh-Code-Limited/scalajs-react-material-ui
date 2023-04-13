@@ -12,9 +12,8 @@ trait TypographyOptions extends js.Object {
   def fontWeightLight: js.UndefOr[Int | String] = js.native
   def fontWeightRegular: js.UndefOr[Int | String] = js.native
   def fontWeightMedium: js.UndefOr[Int | String] = js.native
-  def useNextVariants: js.UndefOr[Boolean] = js.native
+  def fontWeightBold: js.UndefOr[Int | String] = js.native
   def htmlFontSize: js.UndefOr[Int] = js.native
-  def allVariants: js.UndefOr[CSSProperties] = js.native
   def h1: js.UndefOr[TypographyStyleOptions] = js.native
   def h2: js.UndefOr[TypographyStyleOptions] = js.native
   def h3: js.UndefOr[TypographyStyleOptions] = js.native
@@ -38,9 +37,8 @@ object TypographyOptions {
     fontWeightLight: js.UndefOr[Int | String] = js.undefined,
     fontWeightRegular: js.UndefOr[Int | String] = js.undefined,
     fontWeightMedium: js.UndefOr[Int | String] = js.undefined,
-    useNextVariants: js.UndefOr[Boolean] = js.undefined,
+    fontWeightBold: js.UndefOr[Int | String] = js.undefined,
     htmlFontSize: js.UndefOr[Int] = js.undefined,
-    allVariants: js.UndefOr[Int] = js.undefined,
     h1: js.UndefOr[TypographyStyleOptions] = js.undefined,
     h2: js.UndefOr[TypographyStyleOptions] = js.undefined,
     h3: js.UndefOr[TypographyStyleOptions] = js.undefined,
@@ -61,9 +59,8 @@ object TypographyOptions {
       fontWeightLight.toOption.map("fontWeightLight" -> _),
       fontWeightRegular.toOption.map("fontWeightRegular" -> _),
       fontWeightMedium.toOption.map("fontWeightMedium" -> _),
-      useNextVariants.toOption.map("useNextVariants" -> _),
+      fontWeightBold.toOption.map("fontWeightMedium" -> _),
       htmlFontSize.toOption.map("htmlFontSize" -> _),
-      allVariants.toOption.map("allVariants" -> _),
       h1.toOption.map("h1" -> _),
       h2.toOption.map("h2" -> _),
       h3.toOption.map("h3" -> _),

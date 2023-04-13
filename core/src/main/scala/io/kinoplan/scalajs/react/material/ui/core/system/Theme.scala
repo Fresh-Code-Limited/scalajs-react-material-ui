@@ -6,21 +6,11 @@ import scala.scalajs.js.|
 
 @js.native
 trait Theme extends js.Object {
-  def shape: Shape = js.native
-
-  def breakpoints: Breakpoints = js.native
-
-  def direction: String = js.native
-
   def mixins: Mixins = js.native
 
   def palette: Palette = js.native
 
-  def props: js.UndefOr[js.Object] = js.native
-
   def shadows: js.Array[String] = js.native
-
-  def spacing: String | (Double => String) | (Double | String, Double | String) => String | (Double | String, Double | String, Double | String) => String | (Double | String, Double | String, Double | String, Double | String) => String = js.native
 
   def transitions: Transitions = js.native
 
