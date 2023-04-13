@@ -10,7 +10,7 @@ object ThemeProvider extends ReactBridgeComponent {
   override protected lazy val componentValue: js.Object = RawComponent
 
   @JSImport(
-    "@mui/system/ThemeProvider/ThemeProvider",
+    "@mui/system/ThemeProvider",
     JSImport.Default
   )
   @js.native

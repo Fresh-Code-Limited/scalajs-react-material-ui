@@ -6,33 +6,40 @@ import scala.scalajs.js.|
 
 @js.native
 trait ThemeOptions extends js.Object {
+  def shape: js.UndefOr[ShapeOptions] = js.native
+  def breakpoints: js.UndefOr[BreakpointsOptions] = js.native
+  def direction: js.UndefOr[Direction.Value] = js.native
   def mixins: js.UndefOr[MixinsOptions] = js.native
-
   def palette: js.UndefOr[PaletteOptions] = js.native
-
   def shadows: js.UndefOr[js.Array[String]] = js.native
-
+  def spacing: js.UndefOr[Double | (Double => (Double | String)) | ((Double | String) => (Double | String))] = js.native
   def transitions: js.UndefOr[TransitionsOptions] = js.native
-
   def typography: js.UndefOr[TypographyOptions | (Palette => TypographyOptions)] = js.native
-
   def zIndex: js.UndefOr[ZIndexOptions] = js.native
 }
 
 object ThemeOptions {
 
   def apply(
+             shape: js.UndefOr[ShapeOptions] = js.undefined,
+             breakpoints: js.UndefOr[BreakpointsOptions] = js.undefined,
+             direction: js.UndefOr[Direction.Value] = js.undefined,
              mixins: js.UndefOr[MixinsOptions] = js.undefined,
              palette: js.UndefOr[PaletteOptions] = js.undefined,
              shadows: js.UndefOr[js.Array[String]] = js.undefined,
+             spacing: js.UndefOr[Double | (Double => (Double | String)) | ((Double | String) => (Double | String))] = js.undefined,
              transitions: js.UndefOr[TransitionsOptions] = js.undefined,
              typography: js.UndefOr[TypographyOptions | js.Function1[Palette, TypographyOptions]] = js.undefined,
              zIndex: js.UndefOr[ZIndexOptions] = js.undefined,
   ) = {
     val o: Map[String, Any] = Seq(
+      shape.toOption.map("shape" -> _),
+      breakpoints.toOption.map("breakpoints" -> _),
+      direction.toOption.map("direction" -> _),
       mixins.toOption.map("mixins" -> _),
       palette.toOption.map("palette" -> _),
       shadows.toOption.map("shadows" -> _),
+      spacing.toOption.map("spacing" -> _),
       transitions.toOption.map("transitions" -> _),
       typography.toOption.map("typography" -> _),
       zIndex.toOption.map("zIndex" -> _)
