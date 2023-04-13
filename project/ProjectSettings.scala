@@ -9,6 +9,8 @@ object ProjectSettings {
 
   val isDemoEnabled: Boolean = Option(System.getenv("DEMO_ENABLED")).getOrElse("1").startsWith("1")
 
+  val customScalaJSVersion = Option(System.getenv("SCALAJS_VERSION"))
+
   lazy val commonProfile: Project => Project = _
     .enablePlugins(ScalaJSBundlerPlugin, ScalafixPlugin)
     .settings(
