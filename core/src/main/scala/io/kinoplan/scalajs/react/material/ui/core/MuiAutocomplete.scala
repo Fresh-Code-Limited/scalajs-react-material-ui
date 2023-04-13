@@ -5,6 +5,7 @@ import scala.scalajs.js.annotation.JSImport
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
 import io.kinoplan.scalajs.react.material.ui.core.internal.PaperClassKey
 import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
+import japgolly.scalajs.react.vdom.VdomNode
 
 import scala.scalajs.js.|
 
@@ -17,7 +18,7 @@ object MuiAutocomplete extends ReactBridgeComponent with MuiAutocompleteExtensio
 
   def apply(
     classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
-//    clearIcon: js.UndefOr[ReactNode] = js.undefined,
+    clearIcon: js.UndefOr[VdomNode] = js.undefined,
     clearText: js.UndefOr[String] = js.undefined,
     closeText: js.UndefOr[String] = js.undefined,
     disabled: js.UndefOr[Boolean] = js.undefined,
@@ -25,15 +26,15 @@ object MuiAutocomplete extends ReactBridgeComponent with MuiAutocompleteExtensio
     forcePopupIcon: js.UndefOr[Boolean | String] = js.undefined,
     fullWidth: js.UndefOr[Boolean] = js.undefined,
     getLimitTagsText: js.UndefOr[js.Function] = js.undefined,
-//    ListboxComponent: js.UndefOr[js.Object] = js.undefined,
-//    ListboxProps: js.UndefOr[js.Object] = js.undefined,
+    ListboxComponent: js.UndefOr[ComponentPropType] = js.undefined,
+    ListboxProps: js.UndefOr[ComponentPropType] = js.undefined,
     loading: js.UndefOr[Boolean] = js.undefined,
     loadingText: js.UndefOr[js.Function] = js.undefined,
     limitTags: js.UndefOr[Int] = js.undefined,
     noOptionsText: js.UndefOr[js.Function] = js.undefined,
     openText: js.UndefOr[String] = js.undefined,
-//    PaperComponent: js.UndefOr[js.Object] = js.undefined,
-//    PopperComponent: js.UndefOr[js.Object] = js.undefined,
+    PaperComponent: js.UndefOr[ComponentPropType] = js.undefined,
+    PopperComponent: js.UndefOr[ComponentPropType] = js.undefined,
     popupIcon: js.UndefOr[js.Function] = js.undefined,
     readOnly: js.UndefOr[Boolean] = js.undefined,
 //    renderGroup: js.UndefOr[js.Function] = js.undefined,
