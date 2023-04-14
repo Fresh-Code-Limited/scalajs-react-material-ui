@@ -1,14 +1,14 @@
 package io.kinoplan.scalajs.react.material.ui.core
 
-import scala.scalajs.js
-import scala.scalajs.js.annotation.JSImport
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
 import io.kinoplan.scalajs.react.material.ui.core.internal.PaperClassKey
-import io.kinoplan.scalajs.react.material.ui.core.system.{BreakpointValues, Breakpoints, SxProps}
+import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 import japgolly.scalajs.react.ReactEvent
 import japgolly.scalajs.react.vdom.VdomNode
 
+import scala.scalajs.js
 import scala.scalajs.js.JSConverters.JSRichMap
+import scala.scalajs.js.annotation.JSImport
 import scala.scalajs.js.|
 
 object MuiAutocomplete extends ReactBridgeComponent with MuiAutocompleteExtensions {
