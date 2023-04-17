@@ -4,6 +4,7 @@ import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
 import io.kinoplan.scalajs.react.material.ui.core.internal.PaperClassKey
 import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
 import japgolly.scalajs.react.ReactEvent
+import japgolly.scalajs.react.facade.React.Node
 import japgolly.scalajs.react.vdom.VdomNode
 
 import scala.scalajs.js
@@ -69,7 +70,7 @@ object MuiAutocomplete extends ReactBridgeComponent with MuiAutocompleteExtensio
              popupIcon: js.UndefOr[js.Function] = js.undefined,
              readOnly: js.UndefOr[Boolean] = js.undefined,
              //    renderGroup: js.UndefOr[js.Function] = js.undefined,
-             //    renderInput: js.UndefOr[js.Function] = js.undefined,
+             renderInput: js.UndefOr[js.Function1[AutocompleteRenderInputParams, Node]] = js.undefined,
              //    renderOption: js.UndefOr[js.Function] = js.undefined,
              //    renderTags: js.UndefOr[js.Function] = js.undefined,
              selectOnFocus: js.UndefOr[Boolean] = js.undefined,
@@ -77,8 +78,20 @@ object MuiAutocomplete extends ReactBridgeComponent with MuiAutocompleteExtensio
              slotProps: js.UndefOr[js.Object] = js.undefined,
              sx: js.UndefOr[SxProps] = js.undefined,
            ): WithProps = auto
-
 }
+
+@js.native
+trait AutocompleteRenderInputParams extends js.Object {
+  def id: String
+  def disabled: Boolean
+  def fullWidth: Boolean
+  def size: String
+
+  def InputLabelProps: js.Object
+  def InputProps: js.Object
+  def inputProps: js.Object
+}
+
 
 trait MuiAutocompleteOption extends js.Object {
   def label: String
@@ -100,7 +113,6 @@ object MuiAutocompleteOption {
 }
 
 trait MuiAutocompleteExtensions {
-
   object ClassKey extends Enumeration with PaperClassKey {
     type Value = String
 
