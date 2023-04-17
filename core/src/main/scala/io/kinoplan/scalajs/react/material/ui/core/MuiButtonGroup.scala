@@ -15,7 +15,6 @@ object MuiButtonGroup extends ReactBridgeComponent with MuiButtonGroupExtensions
   def apply(
     classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
     color: js.UndefOr[Color.Value] = js.undefined,
-    component: js.UndefOr[ComponentPropType] = js.undefined,
     disabled: js.UndefOr[Boolean] = js.undefined,
     disableElevation: js.UndefOr[Boolean] = js.undefined,
     disableFocusRipple: js.UndefOr[Boolean] = js.undefined,
