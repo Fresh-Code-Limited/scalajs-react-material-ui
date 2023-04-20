@@ -13,21 +13,27 @@ object MuiAccordion extends ReactBridgeComponent with MuiAccordionExtensions {
   @js.native
   object RawComponent extends js.Function
 
-  def apply(
-    classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
-    CollapseProps: js.UndefOr[js.Object] = js.undefined,
-    defaultExpanded: js.UndefOr[Boolean] = js.undefined,
-    disabled: js.UndefOr[Boolean] = js.undefined,
-    disabledGutters: js.UndefOr[Boolean] = js.undefined,
-    expanded: js.UndefOr[Boolean] = js.undefined,
-    onChange: js.UndefOr[js.Function] = js.undefined,
-    component: js.UndefOr[ComponentPropType] = js.undefined,
-    sx: js.UndefOr[SxProps] = js.undefined,
-  ): WithProps = auto
+  def apply(classes: js.UndefOr[Map[ClassKey.Value, String]] = js.undefined,
+            CollapseProps: js.UndefOr[js.Object] = js.undefined,
+            defaultExpanded: js.UndefOr[Boolean] = js.undefined,
+            disabled: js.UndefOr[Boolean] = js.undefined,
+            disableGutters: js.UndefOr[Boolean] = js.undefined,
+            elevation: js.UndefOr[Double] = js.undefined,
+            expanded: js.UndefOr[Boolean] = js.undefined,
+            onChange: js.UndefOr[js.Function] = js.undefined,
+            square: js.UndefOr[Boolean] = js.undefined,
+            sx: js.UndefOr[SxProps] = js.undefined,
+            component: js.UndefOr[ComponentPropType] = js.undefined,
+            variant: js.UndefOr[Variant.Value] = js.undefined,
+           ): WithProps = auto
 
 }
 
 trait MuiAccordionExtensions {
+  object Variant extends Enumeration {
+    val elevation = "elevation"
+    val outlined = "outlined"
+  }
 
   object ClassKey extends Enumeration with PaperClassKey {
     type Value = String
