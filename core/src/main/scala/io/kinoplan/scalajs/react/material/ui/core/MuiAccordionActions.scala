@@ -26,7 +26,7 @@ trait MuiAccordionActionsExtensions {
     type Value = String
 
     val root = "root"
-    val action = "action"
+    val spacing = "spacing"
   }
 
 }

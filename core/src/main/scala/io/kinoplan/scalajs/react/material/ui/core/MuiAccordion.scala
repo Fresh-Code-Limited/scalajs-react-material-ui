@@ -18,11 +18,11 @@ object MuiAccordion extends ReactBridgeComponent with MuiAccordionExtensions {
     CollapseProps: js.UndefOr[js.Object] = js.undefined,
     defaultExpanded: js.UndefOr[Boolean] = js.undefined,
     disabled: js.UndefOr[Boolean] = js.undefined,
-    disabledGutters: js.UndefOr[Boolean] = js.undefined,
+    disableGutters: js.UndefOr[Boolean] = js.undefined,
     expanded: js.UndefOr[Boolean] = js.undefined,
     onChange: js.UndefOr[js.Function] = js.undefined,
-    component: js.UndefOr[ComponentPropType] = js.undefined,
     sx: js.UndefOr[SxProps] = js.undefined,
+    component: js.UndefOr[ComponentPropType] = js.undefined,
   ): WithProps = auto
 
 }
