@@ -19,7 +19,7 @@ object MuiAutocomplete extends ReactBridgeComponent with MuiAutocompleteExtensio
   @js.native
   object RawComponent extends js.Function
 
-  def apply(
+  def apply[T](
              autoComplete: js.UndefOr[Boolean] = js.undefined,
              autoHighlight: js.UndefOr[Boolean] = js.undefined,
              autoSelect: js.UndefOr[Boolean] = js.undefined,
@@ -44,11 +44,12 @@ object MuiAutocomplete extends ReactBridgeComponent with MuiAutocompleteExtensio
              freeSolo: js.UndefOr[Boolean] = js.undefined,
              fullWidth: js.UndefOr[Boolean] = js.undefined,
              getLimitTagsText: js.UndefOr[js.Function] = js.undefined,
+             getOptionLabel: js.UndefOr[T => String] = js.undefined,
              handleHomeEndKeys: js.UndefOr[Boolean] = js.undefined,
              id: js.UndefOr[String] = js.undefined,
              includeInputInList: js.UndefOr[Boolean] = js.undefined,
              inputValue: js.UndefOr[String] = js.undefined,
-             isOptionEqualToValue: js.UndefOr[(Any, Any) => Boolean] = js.undefined,
+             isOptionEqualToValue: js.UndefOr[(T, T) => Boolean] = js.undefined,
              ListboxComponent: js.UndefOr[ComponentPropType] = js.undefined,
              ListboxProps: js.UndefOr[ComponentPropType] = js.undefined,
              loading: js.UndefOr[Boolean] = js.undefined,
@@ -56,14 +57,14 @@ object MuiAutocomplete extends ReactBridgeComponent with MuiAutocompleteExtensio
              limitTags: js.UndefOr[Int] = js.undefined,
              multiple: js.UndefOr[Boolean] = js.undefined,
              noOptionsText: js.UndefOr[js.Function] = js.undefined,
-             onChange: js.UndefOr[ReactHandler2[ReactEvent, js.Any]] = js.undefined,
+             onChange: js.UndefOr[ReactHandler2[ReactEvent, T]] = js.undefined,
              onClose: js.UndefOr[js.Function2[ReactEvent, String, Unit]] = js.undefined,
              onHighlightChange: js.UndefOr[ReactHandler2[ReactEvent, js.Any]] = js.undefined,
-             onInputChange: js.UndefOr[ReactHandler2[ReactEvent, js.Any]] = js.undefined,
+             onInputChange: js.UndefOr[ReactHandler2[ReactEvent, String]] = js.undefined,
              onOpen: js.UndefOr[ReactHandler1[ReactEvent]] = js.undefined,
              open: js.UndefOr[Boolean] = js.undefined,
              openOnFocus: js.UndefOr[Boolean] = js.undefined,
-             options: js.UndefOr[js.Array[MuiAutocompleteOption]] = js.undefined,
+             options: js.UndefOr[js.Array[T]] = js.undefined,
              openText: js.UndefOr[String] = js.undefined,
              PaperComponent: js.UndefOr[ComponentPropType] = js.undefined,
              PopperComponent: js.UndefOr[ComponentPropType] = js.undefined,

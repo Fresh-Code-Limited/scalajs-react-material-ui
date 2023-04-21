@@ -5,6 +5,7 @@ import scala.scalajs.js.annotation.JSImport
 import io.kinoplan.scalajs.react.bridge.{ReactBridgeComponent, WithProps}
 import io.kinoplan.scalajs.react.material.ui.core.internal.PaperClassKey
 import io.kinoplan.scalajs.react.material.ui.core.system.SxProps
+import japgolly.scalajs.react.ReactEvent
 
 object MuiAccordion extends ReactBridgeComponent with MuiAccordionExtensions {
   override protected lazy val componentValue: js.Function = RawComponent
@@ -20,7 +21,7 @@ object MuiAccordion extends ReactBridgeComponent with MuiAccordionExtensions {
             disableGutters: js.UndefOr[Boolean] = js.undefined,
             elevation: js.UndefOr[Double] = js.undefined,
             expanded: js.UndefOr[Boolean] = js.undefined,
-            onChange: js.UndefOr[js.Function] = js.undefined,
+            onChange: js.UndefOr[ReactHandler2[ReactEvent, Boolean]] = js.undefined,
             square: js.UndefOr[Boolean] = js.undefined,
             sx: js.UndefOr[SxProps] = js.undefined,
             component: js.UndefOr[ComponentPropType] = js.undefined,
