@@ -78,6 +78,7 @@ object MuiAutocomplete extends ReactBridgeComponent with MuiAutocompleteExtensio
              size: js.UndefOr[String] = js.undefined,
              slotProps: js.UndefOr[js.Object] = js.undefined,
              sx: js.UndefOr[SxProps] = js.undefined,
+             value: js.UndefOr[js.Object] = js.undefined,
            ): WithProps = auto
 }
 
