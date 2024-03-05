@@ -32,6 +32,8 @@ object MuiAlert extends ReactBridgeComponent with MuiAlertExtensions {
 
 trait MuiAlertExtensions {
   object Variant extends Enumeration {
+    type Value = String
+
     val standard = "standard"
     val filled = "filled"
     val outlined = "outlined"
