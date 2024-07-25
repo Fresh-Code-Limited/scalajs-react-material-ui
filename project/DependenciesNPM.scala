@@ -9,10 +9,10 @@ object DependenciesNPM {
   import Versions._
 
   // A -> Z
-  val materialUiCore                = "@mui/material"                      -> "5.11.16"
-  val materialUiSystem              = "@mui/system"                        -> "5.11.16"
-  val materialUiIcons               = "@mui/icons-material"                -> "5.11.16"
-  val materialUiLab                 = "@mui/lab"                           -> "5.0.0-alpha.119"
+  val materialUiCore                = "@mui/material"                      -> "5.16.5"
+  val materialUiSystem              = "@mui/system"                        -> "5.16.5"
+  val materialUiIcons               = "@mui/icons-material"                -> "5.16.5"
+  val materialUiLab                 = "@mui/lab"                           -> "5.0.0-alpha.173"
   val react                         = "react"                              -> reactV
   val reactDom                      = "react-dom"                          -> reactDomV
   val reactSwipeableViews           = "react-swipeable-views"              -> reactSwipeableViewsV
